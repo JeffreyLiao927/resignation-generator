@@ -20,402 +20,58 @@
             --text-main: #1e293b;
             --text-light: #64748b;
         }
-
-        /* --- 天堂之境 視覺 --- */
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background: linear-gradient(-45deg, #e0f2fe, #bae6fd, #e0f2fe, #fef3c7);
-            background-size: 400% 400%;
-            animation: heavenAnimation 25s ease infinite;
-            color: var(--text-main);
-        }
-
-        @keyframes heavenAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .form-section-wrapper {
-            background-color: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 2.5rem;
-            padding: 2.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-
-        .form-section-header {
-            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-            border-radius: 1.5rem;
-            position: relative;
-        }
-
-        /* --- 漂浮標語 (九宮格結界修正) --- */
-        #header-taglines-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .tagline {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            color: #e0e7ff;
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.8rem;
-            white-space: nowrap;
-            animation: float 6s ease-in-out infinite;
-            transform-origin: center center;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px) rotate(var(--r)); }
-            50% { transform: translateY(-8px) rotate(var(--r)); }
-            100% { transform: translateY(0px) rotate(var(--r)); }
-        }
-
-        /* --- 「神諭卡牌」選擇系統 --- */
-        #select-modal-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 40;
-            background-color: rgba(0, 0, 0, 0.3);
-            transition-property: opacity;
-            transition-duration: 300ms;
-        }
-        #select-modal {
-            position: fixed;
-            z-index: 50;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 91.666667%;
-            max-width: 42rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-radius: 1rem;
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-            padding: 1.5rem;
-            transition-property: all;
-            transition-duration: 300ms;
-        }
-        #select-modal.hidden,
-        #select-modal-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        #select-modal.hidden {
-            transform: translate(-50%, -50%) scale(0.95);
-        }
-        #select-modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1rem;
-            color: #334155;
-        }
-        #select-modal-search {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border-radius: 0.75rem;
-            border: 2px solid #e2e8f0;
-            outline: none;
-        }
-        #select-modal-search:focus {
-            border-color: #38bdf8;
-            box-shadow: 0 0 0 2px #bae6fd;
-        }
-        #select-modal-options {
-            max-height: 60vh;
-            overflow-y: auto;
-            padding-right: 0.5rem;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.75rem;
-        }
-        @media (min-width: 768px) {
-            #select-modal-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        }
-        @media (min-width: 1024px) {
-            #select-modal-options { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-        }
-        .modal-optgroup {
-            grid-column: 1 / -1;
-            font-size: 0.875rem;
-            font-weight: 700;
-            color: #d97706;
-            letter-spacing: 0.1em;
-            margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.25rem;
-            display: flex;
-            align-items: center;
-            cursor: default;
-            text-align: center;
-        }
-        .modal-optgroup span {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-        .modal-optgroup::before, .modal-optgroup::after {
-            content: '';
-            flex-grow: 1;
-            height: 1px;
-            background-color: #fde68a;
-        }
-        .grid-option-card {
-            padding: 1rem;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: #334155;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: 2px solid transparent;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
-        .grid-option-card:hover {
-            transform: scale(1.05);
-            border-color: var(--sky-blue-dark);
-            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.3);
-        }
-        .grid-option-card.selected {
-            background: var(--sky-blue-dark);
-            color: white;
-            font-weight: bold;
-            border-color: var(--sky-blue-dark);
-            transform: scale(1.05);
-        }
+        body { font-family: 'Noto Sans TC', sans-serif; background: linear-gradient(-45deg, #e0f2fe, #bae6fd, #e0f2fe, #fef3c7); background-size: 400% 400%; animation: heavenAnimation 25s ease infinite; color: var(--text-main); }
+        @keyframes heavenAnimation { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .form-section-wrapper { background-color: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 2.5rem; padding: 2.5rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 1px solid rgba(255, 255, 255, 0.8); }
+        .form-section-header { background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); border-radius: 1.5rem; position: relative; }
+        #header-taglines-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; pointer-events: none; }
+        .tagline { position: absolute; background: rgba(255, 255, 255, 0.1); color: #e0e7ff; padding: 4px 12px; border-radius: 99px; font-size: 0.8rem; white-space: nowrap; animation: float 6s ease-in-out infinite; transform-origin: center center; }
+        @keyframes float { 0% { transform: translateY(0px) rotate(var(--r)); } 50% { transform: translateY(-8px) rotate(var(--r)); } 100% { transform: translateY(0px) rotate(var(--r)); } }
+        #select-modal-overlay { position: fixed; inset: 0; z-index: 40; background-color: rgba(0, 0, 0, 0.3); transition-property: opacity; transition-duration: 300ms; }
+        #select-modal { position: fixed; z-index: 50; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 91.666667%; max-width: 42rem; background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 1rem; box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); padding: 1.5rem; transition-property: all; transition-duration: 300ms; }
+        #select-modal.hidden, #select-modal-overlay.hidden { opacity: 0; pointer-events: none; }
+        #select-modal.hidden { transform: translate(-50%, -50%) scale(0.95); }
+        #select-modal-title { font-size: 1.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #334155; }
+        #select-modal-search { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 0.75rem; border: 2px solid #e2e8f0; outline: none; }
+        #select-modal-search:focus { border-color: #38bdf8; box-shadow: 0 0 0 2px #bae6fd; }
+        #select-modal-options { max-height: 60vh; overflow-y: auto; padding-right: 0.5rem; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+        @media (min-width: 768px) { #select-modal-options { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (min-width: 1024px) { #select-modal-options { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+        .modal-optgroup { grid-column: 1 / -1; font-size: 0.875rem; font-weight: 700; color: #d97706; letter-spacing: 0.1em; margin-top: 0.5rem; margin-bottom: 0.5rem; padding-bottom: 0.25rem; display: flex; align-items: center; cursor: default; text-align: center; }
+        .modal-optgroup span { padding-left: 1rem; padding-right: 1rem; }
+        .modal-optgroup::before, .modal-optgroup::after { content: ''; flex-grow: 1; height: 1px; background-color: #fde68a; }
+        .grid-option-card { padding: 1rem; border-radius: 0.75rem; cursor: pointer; transition: all 0.2s; color: #334155; background-color: rgba(255, 255, 255, 0.5); border: 2px solid transparent; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.5rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        .grid-option-card:hover { transform: scale(1.05); border-color: var(--sky-blue-dark); box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.3); }
+        .grid-option-card.selected { background: var(--sky-blue-dark); color: white; font-weight: bold; border-color: var(--sky-blue-dark); transform: scale(1.05); }
         .grid-option-card .emoji { font-size: 2.25rem; }
         .grid-option-card .text { font-size: 0.875rem; font-weight: 600; }
-
-        /* --- UI元件美化 --- */
-        label {
-            display: block;
-            font-size: 1rem;
-            font-weight: 700;
-            color: #475569;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
-        }
-        input[type="text"], input[type="number"], .select-button {
-            width: 100%;
-            padding: 1rem;
-            border-radius: 0.75rem;
-            box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.05);
-            transition: all 0.3s;
-            background-color: #f8fafc;
-            border: 2px solid #e2e8f0;
-            color: #334155;
-            outline: none;
-        }
-        input[type="text"]:focus, input[type="number"]:focus, .select-button:focus {
-             background-color: white;
-             border-color: var(--sky-blue-dark);
-             box-shadow: 0 0 0 2px var(--sky-blue-medium);
-        }
-        .select-button {
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-        }
-        .select-button span.text {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .select-button .emoji {
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-        }
-        fieldset {
-            border: none;
-            border-top: 2px solid var(--sky-blue-medium);
-            padding-top: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        legend {
-            font-size: 1.25rem;
-            font-weight: 700;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            color: #0369a1;
-            letter-spacing: 0.1em;
-            transform: translateY(-2rem);
-            background-color: transparent;
-        }
-        
-        /* --- 按鈕美化 --- */
-        .length-selector {
-            display: flex;
-            background-color: rgba(186, 230, 253, 0.5);
-            border-radius: 99px;
-            padding: 5px;
-            border: 2px solid var(--sky-blue-medium);
-        }
-        .length-selector button {
-            flex: 1;
-            padding: 0.75rem 0.5rem;
-            border: none;
-            background: transparent;
-            color: var(--text-light);
-            border-radius: 99px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            cursor: pointer;
-        }
-        .length-selector button.active {
-            color: white;
-            background: var(--sky-blue-dark);
-            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
-        }
-        .radio-group label {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            margin: 0.25rem;
-            border-radius: 99px;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: #475569;
-            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            gap: 0.5rem;
-            border: 2px solid var(--sky-blue-medium);
-            background: white;
-        }
-        .radio-group input[type="radio"]:checked + label {
-            color: white;
-            background: var(--golden-dark);
-            border-color: var(--golden-dark);
-            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-        }
-        .shiny-btn {
-            position: relative;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.5rem;
-            padding: 1.2rem 3rem;
-            border-radius: 9999px;
-            color: white;
-            background: linear-gradient(135deg, var(--golden-dark) 0%, var(--sky-blue-dark) 100%);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: none;
-            cursor: pointer;
-        }
-        .shiny-btn:hover:not(:disabled) {
-            transform: scale(1.05) translateY(-5px);
-            box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.5);
-        }
-        .shiny-btn:disabled {
-            opacity: 0.7;
-            cursor: wait;
-        }
-        #resetBtn {
-            font-size: 1.125rem;
-            padding: 0.75rem 2rem;
-            font-weight: 700;
-            border-radius: 99px;
-            color: #475569;
-            background-color: white;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            border: 2px solid #e2e8f0;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        #resetBtn:hover {
-            background-color: var(--golden-light);
-            border-color: var(--golden-dark);
-            transform: scale(1.05);
-        }
-
-        /* --- 慶祝動畫 --- */
-        #congrats-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 50;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition-property: opacity;
-            transition-duration: 500ms;
-            background-color: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        #congrats-box {
-            text-align: center;
-            color: var(--text-main);
-            animation: fadeInScale 0.5s ease-out;
-        }
-        #congrats-box h2 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
-        #congrats-box p {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-        }
-        .congrats-emoji {
-            font-size: 5rem;
-            animation: congrats-pop 1s ease-in-out infinite;
-        }
-
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes congrats-pop {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        /* --- A4紙張 & PDF修復 --- */
-        .a4-paper {
-            background: white;
-            width: 21cm;
-            min-height: 29.7cm;
-            padding: 1.5cm;
-            margin: 20px auto;
-            box-shadow: 0 15px 40px rgba(100, 116, 139, 0.2);
-            box-sizing: border-box;
-            color: #1a1a1a;
-            font-family: 'Noto Serif TC', serif;
-            font-size: 11.5pt;
-            border: 1px solid #e2e8f0;
-        }
-        .letter-frame {
-            border: 1px solid #cbd5e1;
-            padding: 1.8cm;
-            height: 100%;
-            outline: 4px double #e2e8f0;
-            outline-offset: 5px;
-            display: flex;
-            flex-direction: column;
-        }
+        label { display: block; font-size: 1rem; font-weight: 700; color: #475569; margin-bottom: 0.5rem; letter-spacing: 0.05em; }
+        input[type="text"], input[type="number"], .select-button { width: 100%; padding: 1rem; border-radius: 0.75rem; box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.05); transition: all 0.3s; background-color: #f8fafc; border: 2px solid #e2e8f0; color: #334155; outline: none; }
+        input[type="text"]:focus, input[type="number"]:focus, .select-button:focus { background-color: white; border-color: var(--sky-blue-dark); box-shadow: 0 0 0 2px var(--sky-blue-medium); }
+        .select-button { text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+        .select-button span.text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .select-button .emoji { font-size: 1.5rem; margin-right: 0.5rem; }
+        fieldset { border: none; border-top: 2px solid var(--sky-blue-medium); padding-top: 1.5rem; margin-top: 1.5rem; }
+        legend { font-size: 1.25rem; font-weight: 700; padding-left: 1rem; padding-right: 1rem; color: #0369a1; letter-spacing: 0.1em; transform: translateY(-2rem); background-color: transparent; }
+        .length-selector { display: flex; background-color: rgba(186, 230, 253, 0.5); border-radius: 99px; padding: 5px; border: 2px solid var(--sky-blue-medium); }
+        .length-selector button { flex: 1; padding: 0.75rem 0.5rem; border: none; background: transparent; color: var(--text-light); border-radius: 99px; font-weight: bold; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 0.5rem; cursor: pointer; }
+        .length-selector button.active { color: white; background: var(--sky-blue-dark); box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4); }
+        .radio-group label { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; margin: 0.25rem; border-radius: 99px; cursor: pointer; transition: all 0.2s; color: #475569; box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); gap: 0.5rem; border: 2px solid var(--sky-blue-medium); background: white; }
+        .radio-group input[type="radio"]:checked + label { color: white; background: var(--golden-dark); border-color: var(--golden-dark); box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4); }
+        .shiny-btn { position: relative; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; padding: 1.2rem 3rem; border-radius: 9999px; color: white; background: linear-gradient(135deg, var(--golden-dark) 0%, var(--sky-blue-dark) 100%); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: none; cursor: pointer; }
+        .shiny-btn:hover:not(:disabled) { transform: scale(1.05) translateY(-5px); box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.5); }
+        .shiny-btn:disabled { opacity: 0.7; cursor: wait; }
+        #resetBtn { font-size: 1.125rem; padding: 0.75rem 2rem; font-weight: 700; border-radius: 99px; color: #475569; background-color: white; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); border: 2px solid #e2e8f0; transition: all 0.3s; cursor: pointer; }
+        #resetBtn:hover { background-color: var(--golden-light); border-color: var(--golden-dark); transform: scale(1.05); }
+        #congrats-overlay { position: fixed; inset: 0; z-index: 50; display: flex; align-items: center; justify-content: center; transition-property: opacity; transition-duration: 500ms; background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+        #congrats-box { text-align: center; color: var(--text-main); animation: fadeInScale 0.5s ease-out; }
+        #congrats-box h2 { font-size: 3rem; font-weight: bold; }
+        #congrats-box p { font-size: 1.2rem; margin-top: 1rem; }
+        .congrats-emoji { font-size: 5rem; animation: congrats-pop 1s ease-in-out infinite; }
+        @keyframes fadeInScale { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        @keyframes congrats-pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+        .a4-paper { background: white; width: 21cm; min-height: 29.7cm; padding: 1.5cm; margin: 20px auto; box-shadow: 0 15px 40px rgba(100, 116, 139, 0.2); box-sizing: border-box; color: #1a1a1a; font-family: 'Noto Serif TC', serif; font-size: 11.5pt; border: 1px solid #e2e8f0; }
+        .letter-frame { border: 1px solid #cbd5e1; padding: 1.8cm; height: 100%; outline: 4px double #e2e8f0; outline-offset: 5px; display: flex; flex-direction: column; }
         .letter-content h2 { color: #1e3a8a; }
         .letter-content p .highlight { font-weight: 700; color: #1e40af; }
         .signature-area { margin-top: 50px; }
@@ -425,27 +81,10 @@
         .stamp-area { display: flex; align-items: center; justify-content: flex-end; }
         .stamp-area-label { font-size: 12pt; font-weight: bold; margin-right: 15px; color: #334155; }
         .stamp-area-box { width: 100px; height: 100px; border: 2px dashed #94a3b8; }
-        
-        @media print {
-            body, .a4-paper {
-                background: white !important;
-                color: black !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            .no-print { display: none !important; }
-            .letter-frame { outline: 4px double #000 !important; border: 1px solid #000 !important; }
-            .letter-content h2 { color: #000 !important; }
-            .letter-content p .highlight { color: #000 !important; font-weight: bold; }
-            .signature-line-label, .stamp-area-label { color: #000 !important; }
-            .signature-line-space { border-bottom-color: #000 !important; }
-            .stamp-area-box { border-color: #000 !important; }
-        }
+        @media print { body, .a4-paper { background: white !important; color: black !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; } .no-print { display: none !important; } .letter-frame { outline: 4px double #000 !important; border: 1px solid #000 !important; } .letter-content h2 { color: #000 !important; } .letter-content p .highlight { color: #000 !important; font-weight: bold; } .signature-line-label, .stamp-area-label { color: #000 !important; } .signature-line-space { border-bottom-color: #000 !important; } .stamp-area-box { border-color: #000 !important; } }
     </style>
 </head>
-
 <body class="p-4 sm:p-8">
-
     <div id="congrats-overlay" class="hidden opacity-0 no-print">
         <div id="congrats-box">
             <div id="congrats-emoji" class="congrats-emoji"></div>
@@ -453,14 +92,12 @@
             <p id="congrats-text"></p>
         </div>
     </div>
-    
     <div id="select-modal-overlay" class="hidden opacity-0 no-print"></div>
     <div id="select-modal" class="hidden opacity-0 no-print">
         <h3 id="select-modal-title"></h3>
         <input type="text" id="select-modal-search" placeholder="搜尋選項...">
         <div id="select-modal-options"></div>
     </div>
-
     <main class="max-w-6xl mx-auto">
         <div class="form-section-wrapper mb-8 no-print">
             <header class="form-section-header text-center p-8 text-white mb-8 shadow-lg">
@@ -469,7 +106,6 @@
                 <p class="text-amber-100 text-lg">每一次的告別，都是為了下一次更華麗的轉身。</p>
                 <p class="text-sky-100 text-sm mt-2">v18.0 終極穩定版</p>
             </header>
-            
             <form id="resignationForm" class="space-y-4">
                 <fieldset><legend>壹、基本資料</legend>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -478,7 +114,6 @@
                         <div><label for="committeeTerm">管委會屆數</label><input type="number" id="committeeTerm" placeholder="預設：87"></div>
                     </div>
                 </fieldset>
-                
                 <fieldset><legend>貳、人格設定</legend>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div><label for="positions">您的社區職位</label><div class="select-button" data-target="positions"></div><select id="positions" class="hidden"></select></div>
@@ -487,7 +122,6 @@
                         <div><label for="reasons">辭職的根本原因</label><div class="select-button" data-target="reasons"></div><select id="reasons" class="hidden"></select></div>
                     </div>
                 </fieldset>
-
                 <fieldset><legend>參、心境與時程</legend>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div><label for="moods">此刻的心情寫照</label><div class="select-button" data-target="moods"></div><select id="moods" class="hidden"></select></div>
@@ -516,7 +150,6 @@
                 <button id="generateBtn" class="shiny-btn"><span>生成我的告別詩</span></button>
             </div>
         </div>
-        
         <div id="letter-container" class="hidden">
              <div class="text-center mb-6 no-print">
                 <button id="downloadBtn" class="shiny-btn px-8 py-3 text-xl">
@@ -528,27 +161,20 @@
             </div>
         </div>
     </main>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-
-    // --- App State & Data ---
     const appState = {
         selectedLength: 'short',
         resetClickCount: 0,
         currentModalTarget: null,
     };
-
-    // --- 完整選項資料庫 ---
     const optionsData = {
         positions: {"標準職位":[{t:"主任委員",e:"👑"},{t:"副主委",e:"🥈"},{t:"監察委員",e:"👁️"},{t:"財務委員",e:"💰"},{t:"安全委員",e:"🛡️"},{t:"機電委員",e:"⚙️"},{t:"環保委員",e:"🌿"},{t:"總務委員",e:"📋"},{t:"文康委員",e:"🎉"}],"進階職位":[{t:"頂樓防水總監",e:"💧"},{t:"壁癌研究員",e:"🔬"},{t:"植栽美學顧問",e:"🌳"},{t:"電梯品質監察官",e:"🚦"},{t:"停車場糾察隊長",e:"🚗"},{t:"公告欄審查官",e:"🧐"}],"社區超人":[{t:"敦親睦鄰大使",e:"❤️"},{t:"貓咪外交部長",e:"🐈"},{t:"中秋總烤官",e:"🔥"},{t:"噪音分析師",e:"🔊"},{t:"包裹失蹤調查員",e:"📦"},{t:"垃圾分類糾察隊",e:"♻️"}],"數位時代":[{t:"Discord管理員",e:"💬"},{t:"元宇宙架構師",e:"🌌"},{t:"Wi-Fi改善委員",e:"📶"},{t:"充電樁促進委員",e:"⚡️"},{t:"AI監視器分析師",e:"🤖"}],"超時空幻想":[{t:"時空裂縫觀測員",e:"🌀"},{t:"社區結界守護者",e:"🙏"},{t:"異世界聯絡窗口",e:"👽"},{t:"風水磁場調和師",e:"☯️"},{t:"量子停車位分配員",e:"⚛️"},{t:"地下積水採集員",e:"🧪"}]},
-        tones: {"社區人格(與他們的執念)":{'佈告欄糾察隊':{e:"🧐",s:"本人 ${name}，因「${reason}」辞去「${pos}」。只是，我走之後，誰來守護佈告欄的排版與錯字？這是個問題。",m:"本人 ${name}，因「${reason}」及「${influencer}」的建議，決定辞去「${pos}」。這段日子，我致力於維護社區佈告欄的資訊正確與版面和諧。從字體大小、行距到用詞遣字，皆力求完美。我離開後，最掛心的莫過於此。若再看到『休閒設施』誤植為『修仙設施』，恐將無人斧正。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，在「${influencer}」的再三規勸與「${reason}」的雙重壓力下，不得不辞去「${pos}」一職。回首任期，我將大部分心力投注於社區的資訊門面——佈告欄。每一張公告，我都視如己出，從標點符號的精準運用，到圖文排版的視覺流暢度，無一不 meticulously。我曾為了『芳鄰』被寫成『芳齡』而輾轉反側，也曾為了避免『漏水』的『漏』字觸霉頭而改用『滲水』。我離開後，這份堅持還能延續嗎？誰能理解『禁止塗鴉』の『鴉』字下面四點底才是康熙字典體的美學？這份對文字秩序的執著，或許就是我最深的牽掛。我的心情，正如此刻佈告欄上那張貼歪了的節電標語一樣，「${mood}」。"},'垃圾分類魔人':{e:"♻️",s:"我，${name}，不幹「${pos}」了，因為「${reason}」。但我最擔心的是，以後的廚餘桶裡，會不會出現不該有的雞骨頭？",m:"本人 ${name}，由於「${reason}」，加上「${influencer}」的勸說，決定辞去「${pos}」。在任內，我最感欣慰的，是推動了資源回收的精細化分類。紙容器、塑膠容器、玻璃瓶...每一項都有其專屬的歸宿。然而，我走之後，這套秩序還能維持嗎？我擔心寶特瓶沒壓扁，擔心電池混入一般垃圾，更擔心有人把前一晚的剩菜當作廚餘回收。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，因「${reason}」之故，並參考了「${influencer}」の意見，決心辞去「${pos}」。這份職務對我而言，不僅是管理，更是一場關於永續的社會實驗。我曾親手繪製回收分類海報，標明PP、PE、PVC的細微差別；我曾在深夜獨自站在垃圾間，只為確認沒有一個便當盒未被清洗。我最大的恐懼，並非社區事務的繁雜，而是我離開後，回收區的秩序將蕩然無存。光是想像那混雜了紙張、塑膠與廚餘的垃圾桶，就足以讓我心悸。這份對純淨分類的執念，讓我此刻的心情「${mood}」，宛如一個被錯誤回收的玻璃瓶，破碎而無奈。"},'頂樓祕密客':{e:"🔭",s:"因為「${reason}」，我 ${name} 辞去「${pos}」。但我會懷念頂樓的風，和那裡無人打擾的寧靜。",m:"在「${influencer}」的建議下，考量到「${reason}」，本人 ${name} 決定辞去「${pos}」。這段時間，頂樓平台是我唯一的避風港。在那裡，城市的喧囂化為遠景。我走之後，還有人會去清掃排水孔旁的落葉嗎？還有人會記得在颱風前固定好那塊鬆動的太陽能板嗎？頂樓の風景，是我唯一的牽掛。我的心情，此刻「${mood}」。",l:"本人 ${name}，因「${reason}」，辞去「${pos}」。這個決定，是「${influencer}」和我一起在頂樓看著夕陽時定下的。對許多人來說，頂樓是禁區，但對我而言，那裡是整個社區的心臟。我為那裡的每一株多肉植物澆過水。我辞去的，不僅是一個職位，更是身為『頂樓守護者』的榮譽。我最擔心的，是那扇通往天台的門會不會因為無人關心而鏽蝕。那份孤獨的風景，是我最深的秘密。我的心情，此刻「${mood}」。"},'社區KOL':{e:"🤳",s:"各位親愛的家人們，我是 ${name}！因為「${reason}」，我必須暫時離開「${pos}」這個大家庭了，真的「${mood}」！",m:"Hi 各位 Follower，我是你們最愛的 ${name}。是的，這是一封告別信。我決定辞去「${pos}」這個職務。感謝大家一路以來的支持與按讚，未來我會在本社區繼續分享我的生活，別忘了追蹤喔！心情？當然是「${mood}」啊，愛你們！",l:"親愛的社區家人們！我是 ${name}。這可能是我以「${pos}」身份發的最後一篇文了。天下無不散的筵席。回想當初，我只是想把社區的點點滴滴分享給大家，從團購美食到中庭的貓咪日常，沒想到獲得了這麼多愛。我辞職後，最擔心的就是，誰來繼續發現社區的美好？誰來組織下一場精彩的聖誕派對？我的心情，此刻「${mood}」，但更多的是感謝。未來，我依然是各位最忠實的鄰居與朋友！"},'地下停車場車神':{e:"🏎️",s:"我 ${name}，辞去「${pos}」。以後我只想好好練車，刷新我的停車格最速傳說。",m:"本人 ${name}，因「${reason}」，辞去「${pos}」。我在這個地下停車場閉著眼睛都能開。但委員的職務，佔用了我太多與愛車獨處的時間。我擔心的，是我走之後，誰能一眼看出哪台車稍微壓線了？誰能維持B3到B1的流暢動線？我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。會議室的空氣，遠不如地下停車場那混合了汽油、輪胎與濕氣的味道來得純粹。我能從引擎的聲浪判斷是哪一戶的車回來了。這個停車場，就是我的秋名山。我辞職後，最大的遺憾，是再也無法以委員身份，去勸說那位總是把車停在兩個車格中間的仁兄。那是一種藝術的破壞！我的心情，此刻「${mood}」。"},'萬年裝修戶鄰居':{e:"🚧",s:"因為樓上那個永無止盡的「${reason}」(鑽牆聲)，我 ${name} 辞去「${pos}」。我需要靜養。",m:"本人 ${name}，辞去「${pos}」一職。辞職原因，是長期的「${reason}」——也就是幾乎全年無休的裝修噪音。這聲音已成為我生活中的BGM。我最擔心的，是我走之後，還有沒有人能像我一樣，精準地記錄下每日的鑽牆時段與分貝數。我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。在長達數百個日子的電鑽交響樂與敲牆協奏曲的洗禮下，我的精神已瀕臨崩潰。這個「${reason}」，已超越了常人所能忍受的極限。我曾開始研究聲學與結構力學，希望能找到噪音的傳導路徑。我辞職後，最掛念的，是那份我親手製作的『社區噪音地圖』。這份心血結晶，不知是否有人能繼承。我的心情，此刻「${mood}」，宛如被困在無限城，永遠聽著鳴女的琵琶聲。"},'中庭花園支配者':{e:"🌺",s:"本人 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請善待我的花花草草。",m:"...辞去「${pos}」。中庭的每一朵花、每一片葉，我都視如己出。我記得桂花樹是什麼時候開的，也知道哪塊草皮容易積水。我最擔心的，是我走後，澆水的時間還會準時嗎？杜鵑花的蟲害還有人會注意嗎？這片花園的榮枯，讓我「${mood}」。",l:"...辞去「${pos}」。對我而言，這個職位真正的辦公室，在中庭的花園裡。我認識那裡的每一株植物，彷彿能聽見它們的低語。我曾為玫瑰與蚜蟲奮戰，也曾為紫薇的晚開而憂心。這個花園就像我的孩子。我離開後，誰能理解『薄肥勤施』の奧義？誰知道那棵櫻花樹需要的是有機肥而不是化學肥？我放不下的，是這一園的生命。這份牽掛，讓我的心情「${mood}」。"},'電梯鏡子凝視者':{e:"🪞",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。以後，就沒有人每天擦電梯鏡子上的指紋了。",m:"...辞去「${pos}」。每日搭乘電梯，凝視鏡中的自己，是我反思社區事務的神聖時刻。那面鏡子的潔淨程度，直接反應了社區的靈魂。我最憂心的，是我走後，鏡面會不會被遺忘？會不會蒙上灰塵與充滿指紋？一個無法清晰映照自我的社區，是沒有未來的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。電梯，是社區垂直的血脈；而電梯裡的鏡子，則是社區的『真實之鏡』。我堅持每日親手擦拭，不僅是為了潔淨，更是為了維護一個能讓住戶坦然面對自我的空間。我見過有人在鏡前整理儀容，見過孩子在鏡前扮鬼臉，也見過情侶在鏡前依偎。這面鏡子承載了太多悲歡。我離開後，這份神聖的潔淨將由誰守護？我無法想像鏡面上出現油膩指紋與水漬的模樣。那將是社區沉淪的開端。這份對光潔的執念，讓我心情「${mood}」。"},'包裹代收之王':{e:"📦",s:"本人 ${name}，因「${reason}」，辞去「${pos}」。我的辞職，受影響最大的，可能是本社區的物流業。",m:"...辞去「${pos}」。在任內，我不僅是委員，更是社區的物流中心。我能從包裹大小判斷是哪戶的網購，也能從膠帶的貼法分辨是哪個平台的出貨。我最擔心的，是我走後，堆積如山的包裹會不會造成管理室的混亂？那些不愛接電話的住戶，包裹會不會放到天荒地老？我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。『J大，有我的包裹嗎？』這句話我一天要聽八十次。我認識每一位快遞員，熟悉他們的送貨路線與脾氣。我建立的包裹暫存SOP，堪稱業界典範。從生鮮冷凍到大型家具，無一不能妥善處理。我辞去的，是一個足以影響社區電商脈動的關鍵節點。我離開後，包裹們該何去何從？會不會有易碎品被當成普通件？會不會有冷凍品在室溫下哭泣？這份對物流秩序的責任感，讓我心情「${mood}」，沉重得像一個裝滿磚塊的包裹。"},'健身房器材の鬼':{e:"💪",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請記得把槓片歸位。",m:"...辞去「${pos}」。社區健身房是我的精神時光屋。我熟悉每一台跑步機的脾氣，也知道哪個啞鈴的重量標示有點模糊。我最擔心的，是我走後，還有人會定期為器材上油嗎？還有人會把用完的槓片好好歸位嗎？一個沒有秩序的健身房，是無法鍛鍊出強健體魄的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。對我來說，『${pos}』の職責，最重要的就是在健身房裡以身作則。我用臥推的重量，扛起社區安全的重擔；我用跑步機的里程，丈量社區發展的長路。我自發性地維護著每一件器材，因為我知道，它們是住戶健康的基石。我離開後，最讓我憂慮的，是那台飛輪的阻力旋鈕會不會鬆脫？是史密斯機的滑軌會不會不再滑順？我無法忍受一個充滿汗漬與混亂的健身房。這份對運動家精神的堅持，讓我心情「${mood}」，彷彿做完力竭的最後一組，疲憊而空虛。"}},"流行文化(彩蛋)":{'鬼滅之刃':{e:"👺",s:"吾名 ${name}，身為社區鬼殺隊「${pos}」，因「${reason}」必須放下日輪刀。此刻我將使出「辞職之呼吸」，任務結束。",m:"吾名 ${name}，身為社區鬼殺隊「${pos}」，本應斬除所有惡鄰。但因「${reason}」此等上弦之鬼，加上「${influencer}」如主公般的命令，我必須放下日輪刀。這段日子，我已用盡全力，使出了水之呼吸、雷之呼吸，甚至火之神神樂來處理社區大小事，卻仍感力不從心。此刻我將使出最終奧義「辞職之呼吸」，心中燃起「${mood}」之炎。在此，任務結束。",l:"吾名 ${name}，身負社區鬼殺隊「${pos}」之職責。本應為了守護鄰里安寧，將惡鬼般的「${reason}」斬於無形。然而，在與之纏鬥的過程中，我發現自己的刀已鈍、心已疲。連「${influencer}」這位如同我師傅鱗瀧先生般的存在，也看出了我的極限。這段時間，我見識了太多如同下弦之鬼般的無理投訴，也對抗了上弦等級的管線問題。我的鬥氣已然耗盡。我將在此使出最後的呼吸法——『辞職之呼吸．拾壹之型．風平浪靜』，將這一切的因緣斬斷。我的心情，此刻「${mood}」，雖有不甘，但這已是我能做出的最好選擇。在此，任務結束，感謝各位多年的培育。"},'復仇者聯盟':{e:"🦸",s:"我是 ${name}，「${pos}」。It's the endgame. 為了應對「${reason}」這個薩諾斯，我決定讓我的職位彈指間灰飛煙滅。",m:"我是 ${name}，擔任「${pos}」。這趟旅程，始於熱情，但現在... It's the endgame. 我看過了一千四百萬種未來，在「${influencer}」の啟示下，發現只有一種方法能應對「${reason}」這個薩諾斯等級的危機，那就是我必須放下這一切。我決定讓我的職位彈指間灰飛煙滅。我的心情？I love you 3000 times, but I have to go.",l:"我是 ${name}。當我接下「${pos}」這個職位時，我以為我能像美國隊長一樣，喊出『Avengers, Assemble!』，帶領大家走向更美好的未來。但現實是，我面對的「${reason}」，比整個齊塔瑞軍團還棘手。我試圖用鋼鐵人的智慧解決問題，用雷神索爾的力量排除萬難，甚至用浩克的憤怒去對抗不公，但最終，我發現自己只是個凡人。在「${influencer}」這位尼克福瑞的提點下，我明白，some people move on, but not us...噢不，是我該 move on 了。這是我唯一的選擇，為了換取社區的和平。我的心情，就像看著東尼史塔克嚥下最後一口氣一樣，「${mood}」。"},'航海王':{e:"🏴‍☠️",s:"我是要成為社區自由王的男人，${name}！但因為「${reason}」，我決定辞去「${pos}」，去尋找我的夥伴了！",m:"我是 ${name}，職位「${pos}」。我本想帶領大家航向名為『和諧社區』的偉大的航道。但是，「${reason}」這座顛倒山擋住了我的去路，而「${influencer}」這位紅髮傑克也告訴 me，是時候出海了。我決定辞去此職，去尋找屬於我的 One Piece！我的心情，此刻「${mood}」！",l:"我是 ${name}！我的夢想，是成為這個社區的『自由王』，讓每個人都能笑著生活。為此，我接下了「${pos}」の重擔，以為這就是我的船。但這片名為『管委會』的海域，遠比想像中險惡。『${reason}』就像是海軍上將赤犬，正義之名下卻是無情的岩漿，讓人無法喘息。而「${influencer}」，就像鷹眼密佛格，讓我看清了自己與世界頂點的差距。我明白了，我的夥伴不在這裡。我要去尋找能與我一同歡笑、一同戰鬥的夥伴，去尋找那傳說中的大秘寶『真正的生活』！對這個職位，我已經沒有任何虧欠了！我的心情，此刻「${mood}」！揚帆！"},'灌籃高手':{e:"🏀",s:"教練...我想辞職...我是「${pos}」${name}，因為「${reason}」，我的任期已經結束了。",m:"我是「${pos}」${name}。我曾對安西教練...不，是對主委說：『我想為社區打球』。但現在，因為「${reason}」，我覺得自己已經無法為團隊做出貢献了。加上「${influencer}」這位彩子的提醒，我知道，比賽結束了。我的心情，此刻「${mood}」，謝謝大家。",l:"我是 ${name}，背號 ${term} 號的「${pos}」。我曾以為，只要堅持下去，就能帶領社區稱霸全國...不，是成為模範社區。我像櫻木花道一樣用熱情處理問題，像流川楓一樣專注於目標。但現實是殘酷的，『${reason}』就像是山王工業，展現了壓倒性的實力，讓我所有的努力都顯得徒勞。而「${influencer}」就像是安西教練，對我說：『如果你現在放棄，任期就到此為止了。』是的，教練...我想辞職。我的光榮時代，或許就是當委員的這段時間了。我的心情，此刻「${mood}」，真的非常喜歡，這次絕不是說謊。"}}},
+        tones: {"社區人格(與他們的執念)":{'佈告欄糾察隊':{e:"🧐",s:"本人 ${name}，因「${reason}」辞去「${pos}」。只是，我走之後，誰來守護佈告欄的排版與錯字？這是個問題。",m:"本人 ${name}，因「${reason}」及「${influencer}」的建議，決定辞去「${pos}」。這段日子，我致力於維護社區佈告欄的資訊正確與版面和諧。從字體大小、行距到用詞遣字，皆力求完美。我離開後，最掛心的莫過於此。若再看到『休閒設施』誤植為『修仙設施』，恐將無人斧正。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，在「${influencer}」的再三規勸與「${reason}」的雙重壓力下，不得不辞去「${pos}」一職。回首任期，我將大部分心力投注於社區的資訊門面——佈告欄。每一張公告，我都視如己出，從標點符號的精準運用，到圖文排版的視覺流暢度，無一不 meticulously。我曾為了『芳鄰』被寫成『芳齡』而輾轉反側，也曾為了避免『漏水』的『漏』字觸霉頭而改用『滲水』。我離開後，這份堅持還能延續嗎？誰能理解『禁止塗鴉』の『鴉』字下面四點底才是康熙字典體的美學？這份對文字秩序的執著，或許就是我最深的牽掛。我的心情，正如此刻佈告欄上那張貼歪了的節電標語一樣，「${mood}」。"},'垃圾分類魔人':{e:"♻️",s:"我，${name}，不幹「${pos}」了，因為「${reason}」。但我最擔心的是，以後的廚餘桶裡，會不會出現不該有的雞骨頭？",m:"本人 ${name}，由於「${reason}」，加上「${influencer}」的勸說，決定辞去「${pos}」。在任內，我最感欣慰的，是推動了資源回收的精細化分類。紙容器、塑膠容器、玻璃瓶...每一項都有其專屬的歸宿。然而，我走之後，這套秩序還能維持嗎？我擔心寶特瓶沒壓扁，擔心電池混入一般垃圾，更擔心有人把前一晚的剩菜當作廚餘回收。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，因「${reason}」之故，並參考了「${influencer}」の意見，決心辞去「${pos}」。這份職務對我而言，不僅是管理，更是一場關於永續的社會實驗。我曾親手繪製回收分類海報，標明PP、PE、PVC的細微差別；我曾在深夜獨自站在垃圾間，只為確認沒有一個便當盒未被清洗。我最大的恐懼，並非社區事務的繁雜，而是我離開後，回收區的秩序將蕩然無存。光是想像那混雜了紙張、塑膠與廚餘的垃圾桶，就足以讓我心悸。這份對純淨分類的執念，讓我此刻的心情「${mood}」，宛如一個被錯誤回收的玻璃瓶，破碎而無奈。"},'頂樓祕密客':{e:"🔭",s:"因為「${reason}」，我 ${name} 辞去「${pos}」。但我會懷念頂樓的風，和那裡無人打擾的寧靜。",m:"在「${influencer}」的建議下，考量到「${reason}」，本人 ${name} 決定辞去「${pos}」。這段時間，頂樓平台是我唯一的避風港。在那裡，城市的喧囂化為遠景。我走之後，還有人會去清掃排水孔旁的落葉嗎？還有人會記得在颱風前固定好那塊鬆動的太陽能板嗎？頂樓の風景，是我唯一的牽掛。我的心情，此刻「${mood}」。",l:"本人 ${name}，因「${reason}」，辞去「${pos}」。這個決定，是「${influencer}」和我一起在頂樓看著夕陽時定下的。對許多人來說，頂樓是禁區，但對我而言，那裡是整個社區的心臟。我為那裡的每一株多肉植物澆過水。我辞去的，不僅是一個職位，更是身為『頂樓守護者』的榮譽。我最擔心的，是那扇通往天台的門會不會因為無人關心而鏽蝕。那份孤獨の風景，是我最深的秘密。我的心情，此刻「${mood}」。"},'社區KOL':{e:"🤳",s:"各位親愛的家人們，我是 ${name}！因為「${reason}」，我必須暫時離開「${pos}」這個大家庭了，真的「${mood}」！",m:"Hi 各位 Follower，我是你們最愛的 ${name}。是的，這是一封告別信。我決定辞去「${pos}」這個職務。感謝大家一路以來的支持與按讚，未來我會在本社區繼續分享我的生活，別忘了追蹤喔！心情？當然是「${mood}」啊，愛你們！",l:"親愛的社區家人們！我是 ${name}。這可能是我以「${pos}」身份發的最後一篇文了。天下無不散的筵席。回想當初，我只是想把社區的點點滴滴分享給大家，從團購美食到中庭的貓咪日常，沒想到獲得了這麼多愛。我辞職後，最擔心的就是，誰來繼續發現社區的美好？誰來組織下一場精彩的聖誕派對？我的心情，此刻「${mood}」，但更多的是感謝。未來，我依然是各位最忠實的鄰居與朋友！"},'地下停車場車神':{e:"🏎️",s:"我 ${name}，辞去「${pos}」。以後我只想好好練車，刷新我的停車格最速傳說。",m:"本人 ${name}，因「${reason}」，辞去「${pos}」。我在這個地下停車場閉著眼睛都能開。但委員的職務，佔用了我太多與愛車獨處的時間。我擔心的，是我走之後，誰能一眼看出哪台車稍微壓線了？誰能維持B3到B1的流暢動線？我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。會議室的空氣，遠不如地下停車場那混合了汽油、輪胎與濕氣的味道來得純粹。我能從引擎的聲浪判斷是哪一戶的車回來了。這個停車場，就是我的秋名山。我辞職後，最大的遺憾，是再也無法以委員身份，去勸說那位總是把車停在兩個車格中間的仁兄。那是一種藝術的破壞！我的心情，此刻「${mood}」。"},'萬年裝修戶鄰居':{e:"🚧",s:"因為樓上那個永無止盡的「${reason}」(鑽牆聲)，我 ${name} 辞去「${pos}」。我需要靜養。",m:"本人 ${name}，辞去「${pos}」一職。辞職原因，是長期的「${reason}」——也就是幾乎全年無休的裝修噪音。這聲音已成為我生活中的BGM。我最擔心的，是我走之後，還有沒有人能像我一樣，精準地記錄下每日的鑽牆時段與分貝數。我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。在長達數百個日子的電鑽交響樂與敲牆協奏曲的洗禮下，我的精神已瀕臨崩潰。這個「${reason}」，已超越了常人所能忍受的極限。我曾開始研究聲學與結構力學，希望能找到噪音的傳導路徑。我辞職後，最掛念的，是那份我親手製作的『社區噪音地圖』。這份心血結晶，不知是否有人能繼承。我的心情，此刻「${mood}」，宛如被困在無限城，永遠聽著鳴女的琵琶聲。"},'中庭花園支配者':{e:"🌺",s:"本人 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請善待我的花花草草。",m:"...辞去「${pos}」。中庭的每一朵花、每一片葉，我都視如己出。我記得桂花樹是什麼時候開的，也知道哪塊草皮容易積水。我最擔心的，是我走後，澆水的時間還會準時嗎？杜鵑花的蟲害還有人會注意嗎？這片花園的榮枯，讓我「${mood}」。",l:"...辞去「${pos}」。對我而言，這個職位真正的辦公室，在中庭的花園裡。我認識那裡的每一株植物，彷彿能聽見它們的低語。我曾為玫瑰與蚜蟲奮戰，也曾為紫薇的晚開而憂心。這個花園就像我的孩子。我離開後，誰能理解『薄肥勤施』の奧義？誰知道那棵櫻花樹需要的是有機肥而不是化學肥？我放不下的，是這一園的生命。這份牽掛，讓我的心情「${mood}」。"},'電梯鏡子凝視者':{e:"🪞",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。以後，就沒有人每天擦電梯鏡子上的指紋了。",m:"...辞去「${pos}」。每日搭乘電梯，凝視鏡中的自己，是我反思社區事務的神聖時刻。那面鏡子的潔淨程度，直接反應了社區的靈魂。我最憂心的，是我走後，鏡面會不會被遺忘？會不會蒙上灰塵與充滿指紋？一個無法清晰映照自我的社區，是沒有未來的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。電梯，是社區垂直的血脈；而電梯裡的鏡子，則是社區的『真實之鏡』。我堅持每日親手擦拭，不僅是為了潔淨，更是為了維護一個能讓住戶坦然面對自我的空間。我見過有人在鏡前整理儀容，見過孩子在鏡前扮鬼臉，也見過情侶在鏡前依偎。這面鏡子承載了太多悲歡。我離開後，這份神聖的潔淨將由誰守護？我無法想像鏡面上出現油膩指紋與水漬的模樣。那將是社區沉淪的開端。這份對光潔的執念，讓我心情「${mood}」。"},'包裹代收之王':{e:"📦",s:"本人 ${name}，因「${reason}」，辞去「${pos}」。我的辞職，受影響最大的，可能是本社區的物流業。",m:"...辞去「${pos}」。在任內，我不僅是委員，更是社區的物流中心。我能從包裹大小判斷是哪戶的網購，也能從膠帶的貼法分辨是哪個平台的出貨。我最擔心的，是我走後，堆積如山的包裹會不會造成管理室的混亂？那些不愛接電話的住戶，包裹會不會放到天荒地老？我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。『J大，有我的包裹嗎？』這句話我一天要聽八十次。我認識每一位快遞員，熟悉他們的送貨路線與脾氣。我建立的包裹暫存SOP，堪稱業界典範。從生鮮冷凍到大型家具，無一不能妥善處理。我辞去的，是一個足以影響社區電商脈動的關鍵節點。我離開後，包裹們該何去何從？會不會有易碎品被當成普通件？會不會有冷凍品在室溫下哭泣？這份對物流秩序的責任感，讓我心情「${mood}」，沉重得像一個裝滿磚塊的包裹。"},'健身房器材の鬼':{e:"💪",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請記得把槓片歸位。",m:"...辞去「${pos}」。社區健身房是我的精神時光屋。我熟悉每一台跑步機的脾氣，也知道哪個啞鈴的重量標示有點模糊。我最擔心的，是我走後，還有人會定期為器材上油嗎？還有人會把用完的槓片好好歸位嗎？一個沒有秩序的健身房，是無法鍛鍊出強健體魄的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。對我來說，『${pos}』の職責，最重要的就是在健身房裡以身作則。我用臥推的重量，扛起社區安全的重擔；我用跑步機的里程，丈量社區發展的長路。我自發性地維護著每一件器材，因為我知道，它們是住戶健康的基石。我離開後，最讓我憂慮的，是那台飛輪的阻力旋鈕會不會鬆脫？是史密斯機的滑軌會不會不再滑順？我無法忍受一個充滿汗漬與混亂的健身房。這份對運動家精神的堅持，讓我心情「${mood}」，彷彿做完力竭的最後一組，疲憊而空虛。"}},"流行文化(彩蛋)":{'鬼滅之刃':{e:"👺",s:"吾名 ${name}，身為社區鬼殺隊「${pos}」，因「${reason}」必須放下日輪刀。此刻我將使出「辞職之呼吸」，任務結束。",m:"吾名 ${name}，身為社區鬼殺隊「${pos}」，本應斬除所有惡鄰。但因「${reason}」此等上弦之鬼，加上「${influencer}」如主公般的命令，我必須放下日輪刀。這段日子，我已用盡全力，使出了水之呼吸、雷之呼吸，甚至火之神神樂來處理社區大小事，卻仍感力不從心。此刻我將使出最終奧義「辞職之呼吸」，心中燃起「${mood}」之炎。在此，任務結束。",l:"吾名 ${name}，身負社區鬼殺隊「${pos}」之職責。本應為了守護鄰里安寧，將惡鬼般的「${reason}」斬於無形。然而，在與之纏鬥的過程中，我發現自己的刀已鈍、心已疲。連「${influencer}」這位如同我師傅鱗瀧先生般的存在，也看出了我的極限。這段時間，我見識了太多如同下弦之鬼般的無理投訴，也對抗了上弦等級的管線問題。我的鬥氣已然耗盡。我將在此使出最後的呼吸法——『辞職之呼吸．拾壹之型．風平浪靜』，將這一切的因緣斬斷。我的心情，此刻「${mood}」，雖有不甘，但這已是我能做出的最好選擇。在此，任務結束，感謝各位多年的培育。"},'復仇者聯盟':{e:"🦸",s:"我是 ${name}，「${pos}」。It's the endgame. 為了應對「${reason}」這個薩諾斯，我決定讓我的職位彈指間灰飛煙滅。",m:"我是 ${name}，擔任「${pos}」。這趟旅程，始於熱情，但現在... It's the endgame. 我看過了一千四百萬種未來，在「${influencer}」の啟示下，發現只有一種方法能應對「${reason}」這個薩諾斯等級的危機，那就是我必須放下這一切。我決定讓我的職位彈指間灰飛煙滅。我的心情？I love you 3000 times, but I have to go.",l:"我是 ${name}。當我接下「${pos}」這個職位時，我以為我能像美國隊長一樣，喊出『Avengers, Assemble!』，帶領大家走向更美好的未來。但現實是，我面對的「${reason}」，比整個齊塔瑞軍團還棘手。我試圖用鋼鐵人的智慧解決問題，用雷神索爾的力量排除萬難，甚至用浩克的憤怒去對抗不公，但最終，我發現自己只是個凡人。在「${influencer}」這位尼克福瑞的提點下，我明白，some people move on, but not us...噢不，是我該 move on 了。這是我唯一的選擇，為了換取社區的和平。我的心情，就像看著東尼史塔克嚥下最後一口氣一樣，「${mood}」。"},'航海王':{e:"🏴‍☠️",s:"我是要成為社區自由王的男人，${name}！但因為「${reason}」，我決定辞去「${pos}」，去尋找我的夥伴了！",m:"我是 ${name}，職位「${pos}」。我本想帶領大家航向名為『和諧社區』的偉大的航道。但是，「${reason}」這座顛倒山擋住了我的去路，而「${influencer}」這位紅髮傑克也告訴我，是時候出海了。我決定辞去此職，去尋找屬於我的 One Piece！我的心情，此刻「${mood}」！",l:"我是 ${name}！我的夢想，是成為這個社區的『自由王』，讓每個人都能笑著生活。為此，我接下了「${pos}」の重擔，以為這就是我的船。但這片名為『管委會』的海域，遠比想像中險惡。『${reason}』就像是海軍上將赤犬，正義之名下卻是無情的岩漿，讓人無法喘息。而「${influencer}」，就像鷹眼密佛格，讓我看清了自己與世界頂點的差距。我明白了，我的夥伴不在這裡。我要去尋找能與我一同歡笑、一同戰鬥的夥伴，去尋找那傳說中的大秘寶『真正的生活』！對這個職位，我已經沒有任何虧欠了！我的心情，此刻「${mood}」！揚帆！"},'灌籃高手':{e:"🏀",s:"教練...我想辞職...我是「${pos}」${name}，因為「${reason}」，我的任期已經結束了。",m:"我是「${pos}」${name}。我曾對安西教練...不，是對主委說：『我想為社區打球』。但現在，因為「${reason}」，我覺得自己已經無法為團隊做出貢献了。加上「${influencer}」這位彩子的提醒，我知道，比賽結束了。我的心情，此刻「${mood}」，謝謝大家。",l:"我是 ${name}，背號 ${term} 號的「${pos}」。我曾以為，只要堅持下去，就能帶領社區稱霸全國...不，是成為模範社區。我像櫻木花道一樣用熱情處理問題，像流川楓一樣專注於目標。但現實是殘酷的，『${reason}』就像是山王工業，展現了壓倒性的實力，讓我所有的努力都顯得徒勞。而「${influencer}」就像是安西教練，對我說：『如果你現在放棄，任期就到此為止了。』是的，教練...我想辞職。我的光榮時代，或許就是當委員的這段時間了。我的心情，此刻「${mood}」，真的非常喜歡，這次絕不是說謊。"}}},
         influencers: {"凡人絮語":[{t:"我爸",e:"👨"},{t:"我媽",e:"👩"},{t:"我老婆",e:"❤️"},{t:"我老公",e:"❤️"},{t:"岳父岳母",e:"👴👵"},{t:"管理員大哥",e:"👮"},{t:"健身教練",e:"💪"},{t:"心理醫生",e:"🧠"},{t:"巷口麵線阿姨",e:"🍜"},{t:"我的貓主子",e:"🐈"}],"權威之聲":[{t:"家庭醫師",e:"🩺"},{t:"公司主管",e:"👔"},{t:"股票分析師",e:"📈"},{t:"我的律師",e:"⚖️"},{t:"孩子學校老師",e:"👩‍🏫"},{t:"風水大師",e:"🧭"}],"天啟神諭":[{t:"媽祖托夢",e:"🙏"},{t:"土地公聖筊",e:"🪙"},{t:"觀世音菩薩",e:"🕊️"},{t:"塔羅牌占卜",e:"🃏"},{t:"紫微斗數命盤",e:"📜"},{t:"路邊算命阿伯",e:"🔮"}],"數位先知":[{t:"VTuber",e:"💻"},{t:"遊戲公會夥伴",e:"🎮"},{t:"ChatGPT 4.0",e:"🤖"},{t:"神秘論壇版主",e:"🤫"},{t:"演算法推薦",e:"📊"}],"宇宙低語":[{t:"宇宙的意志",e:"🌌"},{t:"東方神秘力量",e:"🐉"},{t:"平行宇宙的自己",e:"👯"},{t:"我的良知",e:"😇"},{t:"蝴蝶效應",e:"🦋"},{t:"被外星人綁架後",e:"🛸"}]},
         reasons: {"經典款":[{t:"生涯規劃",e:"🚀"},{t:"家庭因素",e:"🏡"},{t:"健康因素",e:"❤️‍🩹"},{t:"工作繁忙",e:"💼"},{t:"即將搬離",e:"🚚"},{t:"無暇兼顧",e:"🤷"},{t:"會議時間衝突",e:"⏰"},{t:"出國深造",e:"✈️"}],"真心話":[{t:"想多打電動",e:"🎮"},{t:"想多陪家人",e:"👨‍👩‍👧‍👦"},{t:"想躺平耍廢",e:"🛌"},{t:"追劇時間不夠用",e:"📺"},{t:"單純不想幹了",e:"🚫"},{t:"理念不合",e:"💔"},{t:"覺得心很累",e:"😩"}],"社區現場":[{t:"Line群組訊息量太大",e:"💬"},{t:"鄰居投訴處理不完",e:"🗣️"},{t:"停車位糾紛心累",e:"🚗"},{t:"每次開會都在吵架",e:"😠"},{t:"發現不會中樂透",e:"💸"}],"奇幻旅程":[{t:"收到霍格華茲通知",e:"🦉"},{t:"被神盾局招募",e:"🛡️"},{t:"要去參加聖杯戰爭",e:"⚔️"},{t:"替身能力覺醒",e:"💥"},{t:"要去打倒魔王",e:"🐉"}]},
         moods: {"正面能量":[{t:"如釋重負",e:"😌"},{t:"欣喜若狂",e:"🥳"},{t:"充滿感激",e:"🙏"},{t:"平靜喜悅",e:"😊"},{t:"靈魂飛翔",e:"🕊️"},{t:"準備開香檳",e:"🍾"}],"負面情緒":[{t:"深感遺憾",e:"😔"},{t:"淡淡憂傷",e:"😢"},{t:"心力交瘁",e:"😫"},{t:"憤怒失望",e:"😠"},{t:"空虛寂寞",e:"🥶"}],"複雜心境":[{t:"百感交集",e:"😵"},{t:"五味雜陳",e:"🥴"},{t:"雖有不捨",e:"🥺"},{t:"誠惶誠恐",e:"😰"},{t:"一絲解脫",e:"😮‍💨"},{t:"身體被掏空",e:"🫥"}],"網路迷因":[{t:"我就爛",e:"😜"},{t:"蕪湖～起飛！",e:"🚀"},{t:"EMO了",e:"🖤"},{t:"泰褲辣",e:"🆒"},{t:"穩了，這波穩了",e:"👍"}]}
     };
-
-    // --- DOM Elements Cache ---
     const dom = {
         form: document.getElementById('resignationForm'),
         letterContainer: document.getElementById('letter-container'),
@@ -570,18 +196,12 @@ document.addEventListener('DOMContentLoaded', () => {
             text: document.getElementById('congrats-text'),
         },
     };
-
-    // --- Helper Functions ---
-
-    /** 隨機打亂陣列 */
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [array[i], array[j]] = [array[j], array[i]];
         }
     };
-
-    /** 從指定分類中獲取一個隨機選項 (適用於陣列結構的資料) */
     const getRandomValue = (category) => {
         const data = optionsData[category];
         const groups = Object.keys(data);
@@ -589,8 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = data[randomGroupKey];
         return items[Math.floor(Math.random() * items.length)];
     };
-    
-    /** 根據選項名稱和長度獲取對應的文案模板 */
     const getToneTemplate = (toneName, length) => {
         for (const group in optionsData.tones) {
             if (optionsData.tones[group][toneName]) {
@@ -598,14 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 return template[length] || template['medium'] || template['short'];
             }
         }
-        // Fallback to a default template if not found
         const fallback = optionsData.tones["社區人格(與他們的執念)"]['佈告欄糾察隊'];
         return fallback[length] || fallback['short'];
     };
-
-    // --- Modal Logic ---
-
-    /** 開啟選項卡牌彈出視窗 */
     function openSelectModal(targetId) {
         appState.currentModalTarget = document.getElementById(targetId);
         const targetLabel = document.querySelector(`label[for=${targetId}]`).textContent;
@@ -616,34 +229,23 @@ document.addEventListener('DOMContentLoaded', () => {
         dom.modalSearch.value = '';
         dom.modalSearch.focus();
     }
-
-    /** 關閉選項卡牌彈出視窗 */
     function closeSelectModal() {
         dom.modalOverlay.classList.add('hidden', 'opacity-0');
         dom.modal.classList.add('hidden', 'opacity-0');
     }
-
-    /** 建立彈出視窗中的所有選項卡牌 */
     function buildModalOptions() {
         const selectElement = appState.currentModalTarget;
         const filter = dom.modalSearch.value.toLowerCase();
         dom.modalOptions.innerHTML = '';
         const data = optionsData[selectElement.id];
-
-        // 建立隨機選項卡
         createModalOption({ t: 'random', e: '✨' }, selectElement);
-
-        // 遍歷資料建立選項
         for (const groupName in data) {
             const groupOptions = data[groupName];
-             // Handle both array of objects and object of objects
             const options = Array.isArray(groupOptions) 
                 ? groupOptions.filter(opt => opt.t.toLowerCase().includes(filter))
                 : Object.keys(groupOptions)
                     .filter(key => key.toLowerCase().includes(filter))
                     .map(key => ({ t: key, e: groupOptions[key].e }));
-
-
             if (options.length > 0) {
                 const groupHeader = document.createElement('div');
                 groupHeader.className = 'modal-optgroup';
@@ -653,21 +255,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
-    /** 建立單個選項卡牌 */
     function createModalOption(optionData, selectElement) {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'grid-option-card';
         const text = optionData.t === 'random' ? '隨機' : optionData.t;
         optionDiv.innerHTML = `<div class="emoji">${optionData.e}</div><div class="text">${text}</div>`;
-        
         if (optionData.t === selectElement.value) {
             optionDiv.classList.add('selected');
         }
-        
         optionDiv.addEventListener('click', () => {
             selectElement.value = optionData.t;
-            // 如果是真實選項，將 emoji 存儲在 dataset 中
             if (optionData.t !== 'random') {
                  const selectedOptionElement = Array.from(selectElement.options).find(o => o.value === optionData.t);
                  if (selectedOptionElement) {
@@ -676,24 +273,14 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 selectElement.dataset.emoji = '✨';
             }
-
             selectElement.dispatchEvent(new Event('change', { bubbles: true }));
             closeSelectModal();
         });
         dom.modalOptions.appendChild(optionDiv);
     }
-
-
-    // --- Main Application Logic ---
-
-    /** 格式化辭職生效時間文字 */
     function formatResignTime(choice, customValue) {
-        if (choice === 'now') {
-            return '自即刻起生效';
-        }
-        if (choice === 'todayEnd') {
-            return '自本日午夜 24:00 時起生效';
-        }
+        if (choice === 'now') { return '自即刻起生效'; }
+        if (choice === 'todayEnd') { return '自本日午夜 24:00 時起生效'; }
         if (choice === 'custom' && customValue) {
             try {
                 const dt = new Date(customValue);
@@ -705,19 +292,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `於中華民國 ${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分起生效`;
             } catch (e) {
                 console.error("Custom time format error:", e);
-                return '自即刻起生效'; // Fallback
+                return '自即刻起生效';
             }
         }
-        return '自即刻起生效'; // Default fallback
+        return '自即刻起生效';
     }
-    
-    /** 根據用戶輸入產生辭職信內容 */
     function generateLetterHTML(data) {
         const today = new Date();
         const rocYear = today.getFullYear() - 1911;
         const month = String(today.getMonth() + 1).padStart(2, '0');
         const dayString = String(today.getDate()).padStart(2, '0');
-
         const content = (data.template || "")
             .replace(/\$\{name\}/g, `<span class="highlight">${data.name}</span>`)
             .replace(/\$\{term\}/g, `<span class="highlight">${data.term}</span>`)
@@ -725,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
             .replace(/\$\{influencer\}/g, `<span class="highlight">${data.influencer}</span>`)
             .replace(/\$\{reason\}/g, `<span class="highlight">${data.reason}</span>`)
             .replace(/\$\{mood\}/g, `<span class="highlight">${data.mood}</span>`);
-
         return `
             <div class="letter-frame">
                 <div class="letter-content" style="flex-grow: 1;">
@@ -744,8 +327,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>`;
     }
-
-    /** 更新預覽區域內容 */
     function updatePreview() {
         if (!dom.letterContainer.classList.contains('hidden')) {
             try {
@@ -754,7 +335,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!el) return { t: '', e: '' };
                     let val = el.value;
                     if (val === 'random') {
-                        // The 'tones' data has a different structure (object of objects) compared to others (array of objects).
                         if (id === 'tones') {
                             const groups = Object.values(optionsData.tones);
                             const randomGroup = groups[Math.floor(Math.random() * groups.length)];
@@ -762,14 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
                             const randomToneKey = toneKeys[Math.floor(Math.random() * toneKeys.length)];
                             return { t: randomToneKey, e: randomGroup[randomToneKey].e };
                         }
-                        
-                        // For other categories with standard array structure, this works fine.
                         return getRandomValue(id);
                     }
                     const selectedOption = Array.from(el.options).find(o => o.value === val);
                     return { t: val, e: selectedOption ? selectedOption.dataset.emoji : '📄' };
                 };
-    
                 const userData = {
                     communityName: document.getElementById('communityName').value || '無限城',
                     name: document.getElementById('yourName').value || 'J大',
@@ -785,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     ),
                 };
                 userData.template = getToneTemplate(userData.tone, appState.selectedLength);
-    
                 dom.letterContent.innerHTML = generateLetterHTML(userData);
             } catch (e) {
                 console.error("Error during preview update:", e);
@@ -793,12 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-
-
-    // --- Event Listeners Setup ---
-
     function attachEventListeners() {
-        // 文章長度選擇器
         dom.lengthSelector.addEventListener('click', e => {
             const button = e.target.closest('button');
             if (button) {
@@ -808,8 +379,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 updatePreview();
             }
         });
-
-        // 生成按鈕
         dom.generateBtn.addEventListener('click', () => {
             if (!dom.congrats.overlay.classList.contains('hidden')) {
                 dom.congrats.overlay.classList.add('hidden', 'opacity-0');
@@ -818,23 +387,9 @@ document.addEventListener('DOMContentLoaded', () => {
             updatePreview();
             dom.letterContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
-
-        // 重設按鈕與彩蛋
         const resetEasterEggs = [
-            {e: '👏', t: '恭喜留任！', x: '社區的和平又被您守護了一次！'},
-            {e: '🤔', t: '咦？又按了一次？', x: '看來您對留任的決心非常堅定呢！'},
-            {e: '🤨', t: '還要按？', x: '您是不是... 找不到生成按鈕在哪？'},
-            {e: '😇', t: '天使的祝福', x: '上天看到了您的犧牲，決定賜福您...繼續當委員。'},
-            {e: '🙏', t: '佛祖的開示', x: '施主，留任即是修行，辞職亦是修行，皆是夢幻泡影。'},
-            {e: '👑', t: '委員，我的超人', x: '您就是社區的英雄，我們都懂。'},
-            {e: '😂', t: '其實很想辞吧？', x: '沒關係，我們都懂，再試一次吧！'},
-            {e: '🤖', t: '系統警告', x: '偵測到「不想辞」能量過高，產生器即將過載...'},
-            {e: '💥', t: '產生器崩壞', x: '好吧，您贏了。我辞職不幹了，您自己想辦法！'},
-            {e: '❓', t: '...哈囉？', x: '您還在？好吧，看來您是真心不想辞了。'},
-            {e: '❤️', t: '我們愛你3000次', x: '謝謝您為社區的付出，真的。'},
-            {e: '✨', t: '您已解鎖「真．留任者」', x: '您的毅力感動了宇宙，祝您任期順利！'}
+            {e: '👏', t: '恭喜留任！', x: '社區的和平又被您守護了一次！'}, {e: '🤔', t: '咦？又按了一次？', x: '看來您對留任的決心非常堅定呢！'}, {e: '🤨', t: '還要按？', x: '您是不是... 找不到生成按鈕在哪？'}, {e: '😇', t: '天使的祝福', x: '上天看到了您的犧牲，決定賜福您...繼續當委員。'}, {e: '🙏', t: '佛祖的開示', x: '施主，留任即是修行，辞職亦是修行，皆是夢幻泡影。'}, {e: '👑', t: '委員，我的超人', x: '您就是社區的英雄，我們都懂。'}, {e: '😂', t: '其實很想辞吧？', x: '沒關係，我們都懂，再試一次吧！'}, {e: '🤖', t: '系統警告', x: '偵測到「不想辞」能量過高，產生器即將過載...'}, {e: '💥', t: '產生器崩壞', x: '好吧，您贏了。我辞職不幹了，您自己想辦法！'}, {e: '❓', t: '...哈囉？', x: '您還在？好吧，看來您是真心不想辞了。'}, {e: '❤️', t: '我們愛你3000次', x: '謝謝您為社區的付出，真的。'}, {e: '✨', t: '您已解鎖「真．留任者」', x: '您的毅力感動了宇宙，祝您任期順利！'}
         ];
-
         dom.resetBtn.addEventListener('click', () => {
             if (!dom.congrats.overlay.classList.contains('hidden')) {
                 dom.congrats.overlay.classList.add('hidden', 'opacity-0');
@@ -850,7 +405,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dom.lengthSelector.querySelector('[data-length="short"]').classList.add('active');
             appState.selectedLength = 'short';
             dom.letterContainer.classList.add('hidden');
-            
             const egg = resetEasterEggs[appState.resetClickCount % resetEasterEggs.length];
             dom.congrats.emoji.textContent = egg.e;
             dom.congrats.title.textContent = egg.t;
@@ -858,16 +412,10 @@ document.addEventListener('DOMContentLoaded', () => {
             dom.congrats.overlay.classList.remove('hidden', 'opacity-0');
             appState.resetClickCount++;
         });
-
-        // 彈出視窗相關
         dom.modalOverlay.addEventListener('click', closeSelectModal);
         dom.modalSearch.addEventListener('input', buildModalOptions);
-
-        // 表單內容變動時即時更新預覽
         dom.form.addEventListener('change', updatePreview);
         dom.form.addEventListener('input', updatePreview);
-
-        // 辭職時間選項
         document.querySelector('.radio-group').addEventListener('change', (e) => {
             const customInput = document.getElementById('customTime');
             if (e.target.value === 'custom') {
@@ -876,15 +424,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 customInput.classList.add('hidden');
             }
         });
-
-        // ENHANCEMENT: Improved download button with loading state and error handling.
         dom.downloadBtn.addEventListener('click', () => {
             updatePreview();
             const originalBtnHTML = dom.downloadBtn.innerHTML;
             dom.downloadBtn.disabled = true;
             dom.downloadBtn.innerHTML = `<span>PDF 產製中... ⏳</span>`;
-
-            // A small delay ensures the button text updates before the heavy PDF task starts
             setTimeout(() => {
                 try {
                     html2pdf().from(dom.letterContent).set({
@@ -894,34 +438,22 @@ document.addEventListener('DOMContentLoaded', () => {
                         html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: null },
                         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
                     }).save().then(() => {
-                        // Restore the button after the save dialog is triggered
                         dom.downloadBtn.innerHTML = originalBtnHTML;
                         dom.downloadBtn.disabled = false;
                     }).catch(err => {
                         console.error("PDF generation failed:", err);
                         dom.downloadBtn.innerHTML = `<span>生成失敗 😭</span>`;
-                        setTimeout(() => {
-                            dom.downloadBtn.innerHTML = originalBtnHTML;
-                            dom.downloadBtn.disabled = false;
-                        }, 2500);
+                        setTimeout(() => { dom.downloadBtn.innerHTML = originalBtnHTML; dom.downloadBtn.disabled = false; }, 2500);
                     });
                 } catch (error) {
                     console.error("An unexpected error occurred during PDF generation:", error);
                     dom.downloadBtn.innerHTML = `<span>發生錯誤 😭</span>`;
-                    setTimeout(() => {
-                        dom.downloadBtn.innerHTML = originalBtnHTML;
-                        dom.downloadBtn.disabled = false;
-                    }, 2500);
+                    setTimeout(() => { dom.downloadBtn.innerHTML = originalBtnHTML; dom.downloadBtn.disabled = false; }, 2500);
                 }
             }, 150);
         });
     }
-
-    // --- Initialization ---
-
-    /** 應用程式初始化 */
     function initialize() {
-        // 1. 產生漂浮標語
         const taglines = ["又雙叒叕當選了？","這是您第幾次辞職？","我們來幫您一鍵清除煩惱！","社區的和平，交給下一位勇者了","辞職一時爽，一直辞職一直爽","再撐一下？還是算了...","您的肝，還好嗎？","社區鬼王就交給你們了！","找不到的噪音就像無限城裡找不到無慘一樣啊啊啊！","社區的孤勇者，愛過，再會了！","我辞的不是職，是寂寞。","解放生產力，從辞職開始！","樓上的噪音，比One Piece還難找！","為愛發電的電池也該換了","我的任期，比手遊的壽命還短","我不幹了，JOJO！","這是一個不能說的秘密(職位)","都是they的錯！","幫我撐十秒！...算了","先承認你就是你朋友","這鍋我不背","感謝各位委員過去的照顧，我的身體狀況...好得不得了！","能力越大，責任越重，所以我選擇能力變小","我的字典裡沒有放棄...但有辞職","你終究要辞職的，為什麼不現在就辞？","錢沒有不見，只是變成了我為社區付出的模樣","再點一次隨機，你會看到不一樣的人生","主委，我不想努力了...","人生好難，當委員更難","我不只斜槓，我還想躺平","這不是辞職，是戰術性轉進","不要問我為什麼，問就是心累","我的熱情，比變了心的女友還回不來","那些殺不死我的，都讓我更想辞職","讓我們看雲去","下一屆，我一定投你！(如果你還選的話)","燃燒自己，照亮社區...然後燒成灰","這屆的委員真難帶","我的故事，說來話長...","總有刁民想害朕","我想靜靜...也別問我靜靜是誰","會議記錄，是我寫過最難的小說","這是一個關於愛與和平...與辞職的故事","再不辞職，頭髮都要掉光了","別攔我，我意已決！","我有一個夢想...就是不用再開會","人生自古誰無死，誰能留下不辞職","只要我辭得夠快，紛擾就追不上我","我不是跑路，是去追逐詩和遠方","委員一職，後會無期","今天的我，沒有極限(指辞職的決心)","為了部落！...啊不對，為了我自己！","其實我...是臥底","這一切，值得嗎？","我累了，毀滅吧，趕緊的","山水有相逢，開會不相見","謝謝，下一位","今天，我想來點...自由的空氣","你的超能力是什麼？我超有錢...才怪，我是無薪委員","社區糾紛，是人性的試煉場","有些人光是活著，就已用盡全力(還要當委員)","我只想做個安靜的美男子/女子","放下助人情結，尊重他人命運","這個職位...泰褲辣！但我還是要辞","確認過眼神，是我不想幹的人","你禮貌嗎？(對著各種鳥事說)","YYDS (永遠得閃)","你當過委員嗎？我沒有，因為我辞了","這資訊量太大了...","你人還怪好的嘞...勸我快辞職","我就爛，拖垮社區防線","簡直是世紀大和解(我跟職位的)","挖呀挖呀挖～挖出一個辞職信","小朋友你是否有很多問號？為什麼我還不辞職","聽我說謝謝你，因為有你，溫M暖了四季(並沒有)","真是栓Q了","芭比Q了",...Array(20).fill(" ")];
         shuffleArray(taglines);
         const container = document.getElementById('header-taglines-container');
@@ -939,27 +471,21 @@ document.addEventListener('DOMContentLoaded', () => {
             tagline.style.setProperty('--r', `${rotation}deg`);
             container.appendChild(tagline);
         });
-
-        // 2. 將資料庫內容填入隱藏的 <select> 元素中
         for (const category in optionsData) {
             const selectElement = document.getElementById(category);
             if (selectElement) {
-                selectElement.innerHTML = ''; // 清空舊選項
-                 // Add a "random" option first
+                selectElement.innerHTML = '';
                 const randomOption = document.createElement('option');
                 randomOption.value = 'random';
                 randomOption.textContent = '隨機';
                 randomOption.dataset.emoji = '✨';
                 selectElement.appendChild(randomOption);
-
                 const data = optionsData[category];
                 for (const groupName in data) {
                     const optgroup = document.createElement('optgroup');
                     optgroup.label = groupName;
                     const itemsOrObjects = data[groupName];
-
                     if (Array.isArray(itemsOrObjects)) {
-                        // Handles: positions, influencers, reasons, moods
                         itemsOrObjects.forEach(item => {
                             const option = document.createElement('option');
                             option.value = item.t;
@@ -968,7 +494,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             optgroup.appendChild(option);
                         });
                     } else {
-                        // Handles the special object structure for: tones
                         for (const itemName in itemsOrObjects) {
                             const itemData = itemsOrObjects[itemName];
                             const option = document.createElement('option');
@@ -982,36 +507,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }
-        
-        // 3. 初始化所有自訂選擇按鈕
         document.querySelectorAll('.select-button').forEach(button => {
             const targetId = button.dataset.target;
             const selectEl = document.getElementById(targetId);
-            
-            // 監聽底層 select 的變化，來更新按鈕外觀
             selectEl.addEventListener('change', (e) => {
                 const isRandom = e.target.value === 'random';
                 const text = isRandom ? '隨機' : e.target.value;
                 const emoji = isRandom ? '✨' : (e.target.options[e.target.selectedIndex]?.dataset.emoji || '📁');
                 button.innerHTML = `<span class="emoji">${emoji}</span><span class="text">${text}</span>`;
             });
-
-            // 設定初始狀態為隨機並觸發一次 change 事件來更新外觀
             selectEl.value = 'random';
             selectEl.dispatchEvent(new Event('change'));
-
-            // 幫按鈕加上點擊事件來打開 modal
             button.addEventListener('click', () => openSelectModal(targetId));
         });
-
-        // 4. 綁定所有事件監聽器
         attachEventListeners();
     }
-
-    // 啟動應用程式
     initialize();
 });
 </script>
-
 </body>
 </html>
