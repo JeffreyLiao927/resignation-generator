@@ -1,0 +1,1034 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="zh-Hant"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;「委員不想幹了」拯救器！ (v18.0 終極穩定版)&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;.hidden { display: none; }&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&amp;family=Noto+Serif+TC:wght@400;700&amp;display=swap" rel="stylesheet"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--sky-blue-light: #e0f2fe;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--sky-blue-medium: #bae6fd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--sky-blue-dark: #38bdf8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--golden-light: #fef3c7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--golden-dark: #f59e0b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-main: #1e293b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--text-light: #64748b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 天堂之境 視覺 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Noto Sans TC', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(-45deg, #e0f2fe, #bae6fd, #e0f2fe, #fef3c7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-size: 400% 400%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: heavenAnimation 25s ease infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-main);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes heavenAnimation {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0% { background-position: 0% 50%; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>50% { background-position: 100% 50%; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>100% { background-position: 0% 50%; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-section-wrapper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.7);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(20px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(20px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 2.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 2.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-section-header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 漂浮標語 (九宮格結界修正) --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#header-taglines-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>top: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>left: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>pointer-events: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.tagline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: rgba(255, 255, 255, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #e0e7ff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 4px 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 99px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.8rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: float 6s ease-in-out infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform-origin: center center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes float {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0% { transform: translateY(0px) rotate(var(--r)); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-8px) rotate(var(--r)); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>100% { transform: translateY(0px) rotate(var(--r)); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 「神諭卡牌」選擇系統 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-overlay {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 40;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(0, 0, 0, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-property: opacity;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-duration: 300ms;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>top: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>left: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translate(-50%, -50%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 91.666667%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 42rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.8);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(16px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(16px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-property: all;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-duration: 300ms;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal.hidden,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-overlay.hidden {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>pointer-events: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal.hidden {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translate(-50%, -50%) scale(0.95);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #334155;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-search {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid #e2e8f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-search:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: #38bdf8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 0 2px #bae6fd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#select-modal-options {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-height: 60vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow-y: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-right: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(2, minmax(0, 1fr));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>#select-modal-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (min-width: 1024px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>#select-modal-options { grid-template-columns: repeat(4, minmax(0, 1fr)); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.modal-optgroup {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>grid-column: 1 / -1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.875rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #d97706;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 0.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-bottom: 0.25rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: default;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.modal-optgroup span {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-left: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-right: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.modal-optgroup::before, .modal-optgroup::after {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>content: '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-grow: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fde68a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid-option-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #334155;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid-option-card:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: var(--sky-blue-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid-option-card.selected {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--sky-blue-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: var(--sky-blue-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid-option-card .emoji { font-size: 2.25rem; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.grid-option-card .text { font-size: 0.875rem; font-weight: 600; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- UI元件美化 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #475569;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 0.05em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="text"], input[type="number"], .select-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: inset 0 2px 4px 0 rgba(0,0,0,0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f8fafc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid #e2e8f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #334155;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input[type="text"]:focus, input[type="number"]:focus, .select-button:focus {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>background-color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>border-color: var(--sky-blue-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>box-shadow: 0 0 0 2px var(--sky-blue-medium);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.select-button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: left;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.select-button span.text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-overflow: ellipsis;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.select-button .emoji {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-right: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>fieldset {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-top: 2px solid var(--sky-blue-medium);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-top: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>legend {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.25rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-left: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-right: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #0369a1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 0.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-2rem);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 按鈕美化 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.length-selector {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(186, 230, 253, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 99px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--sky-blue-medium);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.length-selector button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 99px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.length-selector button.active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--sky-blue-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.radio-group label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0.25rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 99px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #475569;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 0.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--sky-blue-medium);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.radio-group input[type="radio"]:checked + label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--golden-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: var(--golden-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.shiny-btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1.2rem 3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 9999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, var(--golden-dark) 0%, var(--sky-blue-dark) 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.shiny-btn:hover:not(:disabled) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: scale(1.05) translateY(-5px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 40px -15px rgba(245, 158, 11, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.shiny-btn:disabled {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: wait;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#resetBtn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.125rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 99px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #475569;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid #e2e8f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#resetBtn:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--golden-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-color: var(--golden-dark);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: scale(1.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- 慶祝動畫 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#congrats-overlay {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-property: opacity;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition-duration: 500ms;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: rgba(255, 255, 255, 0.5);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(8px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(8px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#congrats-box {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--text-main);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: fadeInScale 0.5s ease-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#congrats-box h2 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 3rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#congrats-box p {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.congrats-emoji {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>animation: congrats-pop 1s ease-in-out infinite;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes fadeInScale {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: scale(0.8); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: scale(1); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@keyframes congrats-pop {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>0%, 100% { transform: scale(1); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>50% { transform: scale(1.2); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* --- A4紙張 &amp; PDF修復 --- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.a4-paper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 21cm;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 29.7cm;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1.5cm;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 20px auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 40px rgba(100, 116, 139, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #1a1a1a;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Noto Serif TC', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 11.5pt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #e2e8f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.letter-frame {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #cbd5e1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1.8cm;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline: 4px double #e2e8f0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>outline-offset: 5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.letter-content h2 { color: #1e3a8a; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.letter-content p .highlight { font-weight: 700; color: #1e40af; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-area { margin-top: 50px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-line { display: flex; align-items: flex-end; justify-content: flex-end; margin-bottom: 40px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-line-label { font-size: 12pt; font-weight: bold; margin-right: 15px; color: #334155; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.signature-line-space { flex-grow: 1; max-width: 250px; border-bottom: 2px solid #64748b; height: 40px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.stamp-area { display: flex; align-items: center; justify-content: flex-end; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.stamp-area-label { font-size: 12pt; font-weight: bold; margin-right: 15px; color: #334155; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.stamp-area-box { width: 100px; height: 100px; border: 2px dashed #94a3b8; }</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media print {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>body, .a4-paper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>background: white !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>color: black !important;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>-webkit-print-color-adjust: exact;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>print-color-adjust: exact;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.no-print { display: none !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.letter-frame { outline: 4px double #000 !important; border: 1px solid #000 !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.letter-content h2 { color: #000 !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.letter-content p .highlight { color: #000 !important; font-weight: bold; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.signature-line-label, .stamp-area-label { color: #000 !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.signature-line-space { border-bottom-color: #000 !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.stamp-area-box { border-color: #000 !important; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body class="p-4 sm:p-8"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="congrats-overlay" class="hidden opacity-0 no-print"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="congrats-box"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="congrats-emoji" class="congrats-emoji"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 id="congrats-title"&gt;&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p id="congrats-text"&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="select-modal-overlay" class="hidden opacity-0 no-print"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="select-modal" class="hidden opacity-0 no-print"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h3 id="select-modal-title"&gt;&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="select-modal-search" placeholder="搜尋選項..."&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="select-modal-options"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-6xl mx-auto"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="form-section-wrapper mb-8 no-print"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;header class="form-section-header text-center p-8 text-white mb-8 shadow-lg"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div id="header-taglines-container"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-4xl sm:text-5xl font-bold mb-3 tracking-wide"&gt;「委員不想幹了」拯救器！&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="text-amber-100 text-lg"&gt;每一次的告別，都是為了下一次更華麗的轉身。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p class="text-sky-100 text-sm mt-2"&gt;v18.0 終極穩定版&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;form id="resignationForm" class="space-y-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;fieldset&gt;&lt;legend&gt;壹、基本資料&lt;/legend&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="communityName"&gt;社區名稱&lt;/label&gt;&lt;input type="text" id="communityName" placeholder="預設：無限城"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="yourName"&gt;您的大名&lt;/label&gt;&lt;input type="text" id="yourName" placeholder="預設：J大"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="committeeTerm"&gt;管委會屆數&lt;/label&gt;&lt;input type="number" id="committeeTerm" placeholder="預設：87"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/fieldset&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;fieldset&gt;&lt;legend&gt;貳、人格設定&lt;/legend&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="positions"&gt;您的社區職位&lt;/label&gt;&lt;div class="select-button" data-target="positions"&gt;&lt;/div&gt;&lt;select id="positions" class="hidden"&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="tones"&gt;您的社區人格 (與執念)&lt;/label&gt;&lt;div class="select-button" data-target="tones"&gt;&lt;/div&gt;&lt;select id="tones" class="hidden"&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="influencers"&gt;影響您決定的關鍵&lt;/label&gt;&lt;div class="select-button" data-target="influencers"&gt;&lt;/div&gt;&lt;select id="influencers" class="hidden"&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="reasons"&gt;辭職的根本原因&lt;/label&gt;&lt;div class="select-button" data-target="reasons"&gt;&lt;/div&gt;&lt;select id="reasons" class="hidden"&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/fieldset&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;fieldset&gt;&lt;legend&gt;參、心境與時程&lt;/legend&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;&lt;label for="moods"&gt;此刻的心情寫照&lt;/label&gt;&lt;div class="select-button" data-target="moods"&gt;&lt;/div&gt;&lt;select id="moods" class="hidden"&gt;&lt;/select&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;label&gt;希望呈現的文章長度&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div id="length-selector" class="length-selector"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button type="button" data-length="short" class="active"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M15.707 5.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L10 8.586l3.293-3.293a1 1 0 011.414 0z" clip-rule="evenodd" /&gt;&lt;/svg&gt;蜻蜓點水&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button type="button" data-length="medium"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" /&gt;&lt;/svg&gt;普通敘事&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;button type="button" data-length="long"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /&gt;&lt;path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /&gt;&lt;/svg&gt;靈魂長嘆&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                     </span>&lt;div class="mt-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;label&gt;您希望何時恢復自由？&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="radio-group mt-2 flex flex-wrap"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="now" name="resignTime" value="now" checked hidden&gt;&lt;label for="now"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" /&gt;&lt;/svg&gt;就是現在！&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="todayEnd" name="resignTime" value="todayEnd" hidden&gt;&lt;label for="todayEnd"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M10 2a1 1 0 00-1 1v1a1 1 0 102 0V3a1 1 0 00-1-1zM4 5a1 1 0 00-1 1v12a1 1 0 102 0V6a1 1 0 00-1-1zM16 5a1 1 0 00-1 1v12a1 1 0 102 0V6a1 1 0 00-1-1zM9 18a1 1 0 001-1v-1a1 1 0 10-2 0v1a1 1 0 001 1z" clip-rule="evenodd" /&gt;&lt;/svg&gt;今天午夜&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;input type="radio" id="custom" name="resignTime" value="custom" hidden&gt;&lt;label for="custom"&gt;&lt;svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"&gt;&lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" /&gt;&lt;/svg&gt;指定時間&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;input type="datetime-local" id="customTime" class="mt-4 hidden w-full max-w-sm p-4 rounded-xl shadow-inner bg-slate-50 border-2 border-slate-200 text-slate-700"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/fieldset&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="mt-12 pt-6 text-center space-x-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="resetBtn" type="button"&gt;&lt;span&gt;不想辭了？&lt;/span&gt;&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="generateBtn" class="shiny-btn"&gt;&lt;span&gt;生成我的告別詩&lt;/span&gt;&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="letter-container" class="hidden"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;div class="text-center mb-6 no-print"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button id="downloadBtn" class="shiny-btn px-8 py-3 text-xl"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;span&gt;下載 PDF 珍藏&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>&lt;div class="a4-preview-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div id="letter-content" class="a4-paper"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1">document.addEventListener('DOMContentLoaded', () =&gt; {</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- App State &amp; Data ---</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const appState = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>selectedLength: 'short',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>resetClickCount: 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>currentModalTarget: null,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- 完整選項資料庫 ---</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const optionsData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>positions: {"標準職位":[{t:"主任委員",e:"👑"},{t:"副主委",e:"🥈"},{t:"監察委員",e:"👁️"},{t:"財務委員",e:"💰"},{t:"安全委員",e:"🛡️"},{t:"機電委員",e:"⚙️"},{t:"環保委員",e:"🌿"},{t:"總務委員",e:"📋"},{t:"文康委員",e:"🎉"}],"進階職位":[{t:"頂樓防水總監",e:"💧"},{t:"壁癌研究員",e:"🔬"},{t:"植栽美學顧問",e:"🌳"},{t:"電梯品質監察官",e:"🚦"},{t:"停車場糾察隊長",e:"🚗"},{t:"公告欄審查官",e:"🧐"}],"社區超人":[{t:"敦親睦鄰大使",e:"❤️"},{t:"貓咪外交部長",e:"🐈"},{t:"中秋總烤官",e:"🔥"},{t:"噪音分析師",e:"🔊"},{t:"包裹失蹤調查員",e:"📦"},{t:"垃圾分類糾察隊",e:"♻️"}],"數位時代":[{t:"Discord管理員",e:"💬"},{t:"元宇宙架構師",e:"🌌"},{t:"Wi-Fi改善委員",e:"📶"},{t:"充電樁促進委員",e:"⚡️"},{t:"AI監視器分析師",e:"🤖"}],"超時空幻想":[{t:"時空裂縫觀測員",e:"🌀"},{t:"社區結界守護者",e:"🙏"},{t:"異世界聯絡窗口",e:"👽"},{t:"風水磁場調和師",e:"☯️"},{t:"量子停車位分配員",e:"⚛️"},{t:"地下積水採集員",e:"🧪"}]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tones: {"社區人格(與他們的執念)":{'佈告欄糾察隊':{e:"🧐",s:"本人 ${name}，因「${reason}」辞去「${pos}」。只是，我走之後，誰來守護佈告欄的排版與錯字？這是個問題。",m:"本人 ${name}，因「${reason}」及「${influencer}」的建議，決定辞去「${pos}」。這段日子，我致力於維護社區佈告欄的資訊正確與版面和諧。從字體大小、行距到用詞遣字，皆力求完美。我離開後，最掛心的莫過於此。若再看到『休閒設施』誤植為『修仙設施』，恐將無人斧正。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，在「${influencer}」的再三規勸與「${reason}」的雙重壓力下，不得不辞去「${pos}」一職。回首任期，我將大部分心力投注於社區的資訊門面——佈告欄。每一張公告，我都視如己出，從標點符號的精準運用，到圖文排版的視覺流暢度，無一不 meticulously。我曾為了『芳鄰』被寫成『芳齡』而輾轉反側，也曾為了避免『漏水』的『漏』字觸霉頭而改用『滲水』。我離開後，這份堅持還能延續嗎？誰能理解『禁止塗鴉』の『鴉』字下面四點底才是康熙字典體的美學？這份對文字秩序的執著，或許就是我最深的牽掛。我的心情，正如此刻佈告欄上那張貼歪了的節電標語一樣，「${mood}」。"},'垃圾分類魔人':{e:"♻️",s:"我，${name}，不幹「${pos}」了，因為「${reason}」。但我最擔心的是，以後的廚餘桶裡，會不會出現不該有的雞骨頭？",m:"本人 ${name}，由於「${reason}」，加上「${influencer}」的勸說，決定辞去「${pos}」。在任內，我最感欣慰的，是推動了資源回收的精細化分類。紙容器、塑膠容器、玻璃瓶...每一項都有其專屬的歸宿。然而，我走之後，這套秩序還能維持嗎？我擔心寶特瓶沒壓扁，擔心電池混入一般垃圾，更擔心有人把前一晚的剩菜當作廚餘回收。這份憂慮，讓我心情「${mood}」。",l:"本人 ${name}，因「${reason}」之故，並參考了「${influencer}」の意見，決心辞去「${pos}」。這份職務對我而言，不僅是管理，更是一場關於永續的社會實驗。我曾親手繪製回收分類海報，標明PP、PE、PVC的細微差別；我曾在深夜獨自站在垃圾間，只為確認沒有一個便當盒未被清洗。我最大的恐懼，並非社區事務的繁雜，而是我離開後，回收區的秩序將蕩然無存。光是想像那混雜了紙張、塑膠與廚餘的垃圾桶，就足以讓我心悸。這份對純淨分類的執念，讓我此刻的心情「${mood}」，宛如一個被錯誤回收的玻璃瓶，破碎而無奈。"},'頂樓祕密客':{e:"🔭",s:"因為「${reason}」，我 ${name} 辞去「${pos}」。但我會懷念頂樓的風，和那裡無人打擾的寧靜。",m:"在「${influencer}」的建議下，考量到「${reason}」，本人 ${name} 決定辞去「${pos}」。這段時間，頂樓平台是我唯一的避風港。在那裡，城市的喧囂化為遠景。我走之後，還有人會去清掃排水孔旁的落葉嗎？還有人會記得在颱風前固定好那塊鬆動的太陽能板嗎？頂樓の風景，是我唯一的牽掛。我的心情，此刻「${mood}」。",l:"本人 ${name}，因「${reason}」，辞去「${pos}」。這個決定，是「${influencer}」和我一起在頂樓看著夕陽時定下的。對許多人來說，頂樓是禁區，但對我而言，那裡是整個社區的心臟。我為那裡的每一株多肉植物澆過水。我辞去的，不僅是一個職位，更是身為『頂樓守護者』的榮譽。我最擔心的，是那扇通往天台的門會不會因為無人關心而鏽蝕。那份孤獨的風景，是我最深的秘密。我的心情，此刻「${mood}」。"},'社區KOL':{e:"🤳",s:"各位親愛的家人們，我是 ${name}！因為「${reason}」，我必須暫時離開「${pos}」這個大家庭了，真的「${mood}」！",m:"Hi 各位 Follower，我是你們最愛的 ${name}。是的，這是一封告別信。我決定辞去「${pos}」這個職務。感謝大家一路以來的支持與按讚，未來我會在本社區繼續分享我的生活，別忘了追蹤喔！心情？當然是「${mood}」啊，愛你們！",l:"親愛的社區家人們！我是 ${name}。這可能是我以「${pos}」身份發的最後一篇文了。天下無不散的筵席。回想當初，我只是想把社區的點點滴滴分享給大家，從團購美食到中庭的貓咪日常，沒想到獲得了這麼多愛。我辞職後，最擔心的就是，誰來繼續發現社區的美好？誰來組織下一場精彩的聖誕派對？我的心情，此刻「${mood}」，但更多的是感謝。未來，我依然是各位最忠實的鄰居與朋友！"},'地下停車場車神':{e:"🏎️",s:"我 ${name}，辞去「${pos}」。以後我只想好好練車，刷新我的停車格最速傳說。",m:"本人 ${name}，因「${reason}」，辞去「${pos}」。我在這個地下停車場閉著眼睛都能開。但委員的職務，佔用了我太多與愛車獨處的時間。我擔心的，是我走之後，誰能一眼看出哪台車稍微壓線了？誰能維持B3到B1的流暢動線？我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。會議室的空氣，遠不如地下停車場那混合了汽油、輪胎與濕氣的味道來得純粹。我能從引擎的聲浪判斷是哪一戶的車回來了。這個停車場，就是我的秋名山。我辞職後，最大的遺憾，是再也無法以委員身份，去勸說那位總是把車停在兩個車格中間的仁兄。那是一種藝術的破壞！我的心情，此刻「${mood}」。"},'萬年裝修戶鄰居':{e:"🚧",s:"因為樓上那個永無止盡的「${reason}」(鑽牆聲)，我 ${name} 辞去「${pos}」。我需要靜養。",m:"本人 ${name}，辞去「${pos}」一職。辞職原因，是長期的「${reason}」——也就是幾乎全年無休的裝修噪音。這聲音已成為我生活中的BGM。我最擔心的，是我走之後，還有沒有人能像我一樣，精準地記錄下每日的鑽牆時段與分貝數。我的心情，此刻「${mood}」。",l:"本人 ${name}，辞去「${pos}」。在長達數百個日子的電鑽交響樂與敲牆協奏曲的洗禮下，我的精神已瀕臨崩潰。這個「${reason}」，已超越了常人所能忍受的極限。我曾開始研究聲學與結構力學，希望能找到噪音的傳導路徑。我辞職後，最掛念的，是那份我親手製作的『社區噪音地圖』。這份心血結晶，不知是否有人能繼承。我的心情，此刻「${mood}」，宛如被困在無限城，永遠聽著鳴女的琵琶聲。"},'中庭花園支配者':{e:"🌺",s:"本人 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請善待我的花花草草。",m:"...辞去「${pos}」。中庭的每一朵花、每一片葉，我都視如己出。我記得桂花樹是什麼時候開的，也知道哪塊草皮容易積水。我最擔心的，是我走後，澆水的時間還會準時嗎？杜鵑花的蟲害還有人會注意嗎？這片花園的榮枯，讓我「${mood}」。",l:"...辞去「${pos}」。對我而言，這個職位真正的辦公室，在中庭的花園裡。我認識那裡的每一株植物，彷彿能聽見它們的低語。我曾為玫瑰與蚜蟲奮戰，也曾為紫薇的晚開而憂心。這個花園就像我的孩子。我離開後，誰能理解『薄肥勤施』の奧義？誰知道那棵櫻花樹需要的是有機肥而不是化學肥？我放不下的，是這一園的生命。這份牽掛，讓我的心情「${mood}」。"},'電梯鏡子凝視者':{e:"🪞",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。以後，就沒有人每天擦電梯鏡子上的指紋了。",m:"...辞去「${pos}」。每日搭乘電梯，凝視鏡中的自己，是我反思社區事務的神聖時刻。那面鏡子的潔淨程度，直接反應了社區的靈魂。我最憂心的，是我走後，鏡面會不會被遺忘？會不會蒙上灰塵與充滿指紋？一個無法清晰映照自我的社區，是沒有未來的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。電梯，是社區垂直的血脈；而電梯裡的鏡子，則是社區的『真實之鏡』。我堅持每日親手擦拭，不僅是為了潔淨，更是為了維護一個能讓住戶坦然面對自我的空間。我見過有人在鏡前整理儀容，見過孩子在鏡前扮鬼臉，也見過情侶在鏡前依偎。這面鏡子承載了太多悲歡。我離開後，這份神聖的潔淨將由誰守護？我無法想像鏡面上出現油膩指紋與水漬的模樣。那將是社區沉淪的開端。這份對光潔的執念，讓我心情「${mood}」。"},'包裹代收之王':{e:"📦",s:"本人 ${name}，因「${reason}」，辞去「${pos}」。我的辞職，受影響最大的，可能是本社區的物流業。",m:"...辞去「${pos}」。在任內，我不僅是委員，更是社區的物流中心。我能從包裹大小判斷是哪戶的網購，也能從膠帶的貼法分辨是哪個平台的出貨。我最擔心的，是我走後，堆積如山的包裹會不會造成管理室的混亂？那些不愛接電話的住戶，包裹會不會放到天荒地老？我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。『J大，有我的包裹嗎？』這句話我一天要聽八十次。我認識每一位快遞員，熟悉他們的送貨路線與脾氣。我建立的包裹暫存SOP，堪稱業界典範。從生鮮冷凍到大型家具，無一不能妥善處理。我辞去的，是一個足以影響社區電商脈動的關鍵節點。我離開後，包裹們該何去何從？會不會有易碎品被當成普通件？會不會有冷凍品在室溫下哭泣？這份對物流秩序的責任感，讓我心情「${mood}」，沉重得像一個裝滿磚塊的包裹。"},'健身房器材の鬼':{e:"💪",s:"我 ${name}，辞去「${pos}」。因為「${reason}」。我走後，請記得把槓片歸位。",m:"...辞去「${pos}」。社區健身房是我的精神時光屋。我熟悉每一台跑步機的脾氣，也知道哪個啞鈴的重量標示有點模糊。我最擔心的，是我走後，還有人會定期為器材上油嗎？還有人會把用完的槓片好好歸位嗎？一個沒有秩序的健身房，是無法鍛鍊出強健體魄的。我的心情，此刻「${mood}」。",l:"...辞去「${pos}」。對我來說，『${pos}』の職責，最重要的就是在健身房裡以身作則。我用臥推的重量，扛起社區安全的重擔；我用跑步機的里程，丈量社區發展的長路。我自發性地維護著每一件器材，因為我知道，它們是住戶健康的基石。我離開後，最讓我憂慮的，是那台飛輪的阻力旋鈕會不會鬆脫？是史密斯機的滑軌會不會不再滑順？我無法忍受一個充滿汗漬與混亂的健身房。這份對運動家精神的堅持，讓我心情「${mood}」，彷彿做完力竭的最後一組，疲憊而空虛。"}},"流行文化(彩蛋)":{'鬼滅之刃':{e:"👺",s:"吾名 ${name}，身為社區鬼殺隊「${pos}」，因「${reason}」必須放下日輪刀。此刻我將使出「辞職之呼吸」，任務結束。",m:"吾名 ${name}，身為社區鬼殺隊「${pos}」，本應斬除所有惡鄰。但因「${reason}」此等上弦之鬼，加上「${influencer}」如主公般的命令，我必須放下日輪刀。這段日子，我已用盡全力，使出了水之呼吸、雷之呼吸，甚至火之神神樂來處理社區大小事，卻仍感力不從心。此刻我將使出最終奧義「辞職之呼吸」，心中燃起「${mood}」之炎。在此，任務結束。",l:"吾名 ${name}，身負社區鬼殺隊「${pos}」之職責。本應為了守護鄰里安寧，將惡鬼般的「${reason}」斬於無形。然而，在與之纏鬥的過程中，我發現自己的刀已鈍、心已疲。連「${influencer}」這位如同我師傅鱗瀧先生般的存在，也看出了我的極限。這段時間，我見識了太多如同下弦之鬼般的無理投訴，也對抗了上弦等級的管線問題。我的鬥氣已然耗盡。我將在此使出最後的呼吸法——『辞職之呼吸．拾壹之型．風平浪靜』，將這一切的因緣斬斷。我的心情，此刻「${mood}」，雖有不甘，但這已是我能做出的最好選擇。在此，任務結束，感謝各位多年的培育。"},'復仇者聯盟':{e:"🦸",s:"我是 ${name}，「${pos}」。It's the endgame. 為了應對「${reason}」這個薩諾斯，我決定讓我的職位彈指間灰飛煙滅。",m:"我是 ${name}，擔任「${pos}」。這趟旅程，始於熱情，但現在... It's the endgame. 我看過了一千四百萬種未來，在「${influencer}」の啟示下，發現只有一種方法能應對「${reason}」這個薩諾斯等級的危機，那就是我必須放下這一切。我決定讓我的職位彈指間灰飛煙滅。我的心情？I love you 3000 times, but I have to go.",l:"我是 ${name}。當我接下「${pos}」這個職位時，我以為我能像美國隊長一樣，喊出『Avengers, Assemble!』，帶領大家走向更美好的未來。但現實是，我面對的「${reason}」，比整個齊塔瑞軍團還棘手。我試圖用鋼鐵人的智慧解決問題，用雷神索爾的力量排除萬難，甚至用浩克的憤怒去對抗不公，但最終，我發現自己只是個凡人。在「${influencer}」這位尼克福瑞的提點下，我明白，some people move on, but not us...噢不，是我該 move on 了。這是我唯一的選擇，為了換取社區的和平。我的心情，就像看著東尼史塔克嚥下最後一口氣一樣，「${mood}」。"},'航海王':{e:"🏴‍☠️",s:"我是要成為社區自由王的男人，${name}！但因為「${reason}」，我決定辞去「${pos}」，去尋找我的夥伴了！",m:"我是 ${name}，職位「${pos}」。我本想帶領大家航向名為『和諧社區』的偉大的航道。但是，「${reason}」這座顛倒山擋住了我的去路，而「${influencer}」這位紅髮傑克也告訴 me，是時候出海了。我決定辞去此職，去尋找屬於我的 One Piece！我的心情，此刻「${mood}」！",l:"我是 ${name}！我的夢想，是成為這個社區的『自由王』，讓每個人都能笑著生活。為此，我接下了「${pos}」の重擔，以為這就是我的船。但這片名為『管委會』的海域，遠比想像中險惡。『${reason}』就像是海軍上將赤犬，正義之名下卻是無情的岩漿，讓人無法喘息。而「${influencer}」，就像鷹眼密佛格，讓我看清了自己與世界頂點的差距。我明白了，我的夥伴不在這裡。我要去尋找能與我一同歡笑、一同戰鬥的夥伴，去尋找那傳說中的大秘寶『真正的生活』！對這個職位，我已經沒有任何虧欠了！我的心情，此刻「${mood}」！揚帆！"},'灌籃高手':{e:"🏀",s:"教練...我想辞職...我是「${pos}」${name}，因為「${reason}」，我的任期已經結束了。",m:"我是「${pos}」${name}。我曾對安西教練...不，是對主委說：『我想為社區打球』。但現在，因為「${reason}」，我覺得自己已經無法為團隊做出貢献了。加上「${influencer}」這位彩子的提醒，我知道，比賽結束了。我的心情，此刻「${mood}」，謝謝大家。",l:"我是 ${name}，背號 ${term} 號的「${pos}」。我曾以為，只要堅持下去，就能帶領社區稱霸全國...不，是成為模範社區。我像櫻木花道一樣用熱情處理問題，像流川楓一樣專注於目標。但現實是殘酷的，『${reason}』就像是山王工業，展現了壓倒性的實力，讓我所有的努力都顯得徒勞。而「${influencer}」就像是安西教練，對我說：『如果你現在放棄，任期就到此為止了。』是的，教練...我想辞職。我的光榮時代，或許就是當委員的這段時間了。我的心情，此刻「${mood}」，真的非常喜歡，這次絕不是說謊。"}}},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>influencers: {"凡人絮語":[{t:"我爸",e:"👨"},{t:"我媽",e:"👩"},{t:"我老婆",e:"❤️"},{t:"我老公",e:"❤️"},{t:"岳父岳母",e:"👴👵"},{t:"管理員大哥",e:"👮"},{t:"健身教練",e:"💪"},{t:"心理醫生",e:"🧠"},{t:"巷口麵線阿姨",e:"🍜"},{t:"我的貓主子",e:"🐈"}],"權威之聲":[{t:"家庭醫師",e:"🩺"},{t:"公司主管",e:"👔"},{t:"股票分析師",e:"📈"},{t:"我的律師",e:"⚖️"},{t:"孩子學校老師",e:"👩‍🏫"},{t:"風水大師",e:"🧭"}],"天啟神諭":[{t:"媽祖托夢",e:"🙏"},{t:"土地公聖筊",e:"🪙"},{t:"觀世音菩薩",e:"🕊️"},{t:"塔羅牌占卜",e:"🃏"},{t:"紫微斗數命盤",e:"📜"},{t:"路邊算命阿伯",e:"🔮"}],"數位先知":[{t:"VTuber",e:"💻"},{t:"遊戲公會夥伴",e:"🎮"},{t:"ChatGPT 4.0",e:"🤖"},{t:"神秘論壇版主",e:"🤫"},{t:"演算法推薦",e:"📊"}],"宇宙低語":[{t:"宇宙的意志",e:"🌌"},{t:"東方神秘力量",e:"🐉"},{t:"平行宇宙的自己",e:"👯"},{t:"我的良知",e:"😇"},{t:"蝴蝶效應",e:"🦋"},{t:"被外星人綁架後",e:"🛸"}]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>reasons: {"經典款":[{t:"生涯規劃",e:"🚀"},{t:"家庭因素",e:"🏡"},{t:"健康因素",e:"❤️‍🩹"},{t:"工作繁忙",e:"💼"},{t:"即將搬離",e:"🚚"},{t:"無暇兼顧",e:"🤷"},{t:"會議時間衝突",e:"⏰"},{t:"出國深造",e:"✈️"}],"真心話":[{t:"想多打電動",e:"🎮"},{t:"想多陪家人",e:"👨‍👩‍👧‍👦"},{t:"想躺平耍廢",e:"🛌"},{t:"追劇時間不夠用",e:"📺"},{t:"單純不想幹了",e:"🚫"},{t:"理念不合",e:"💔"},{t:"覺得心很累",e:"😩"}],"社區現場":[{t:"Line群組訊息量太大",e:"💬"},{t:"鄰居投訴處理不完",e:"🗣️"},{t:"停車位糾紛心累",e:"🚗"},{t:"每次開會都在吵架",e:"😠"},{t:"發現不會中樂透",e:"💸"}],"奇幻旅程":[{t:"收到霍格華茲通知",e:"🦉"},{t:"被神盾局招募",e:"🛡️"},{t:"要去參加聖杯戰爭",e:"⚔️"},{t:"替身能力覺醒",e:"💥"},{t:"要去打倒魔王",e:"🐉"}]},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>moods: {"正面能量":[{t:"如釋重負",e:"😌"},{t:"欣喜若狂",e:"🥳"},{t:"充滿感激",e:"🙏"},{t:"平靜喜悅",e:"😊"},{t:"靈魂飛翔",e:"🕊️"},{t:"準備開香檳",e:"🍾"}],"負面情緒":[{t:"深感遺憾",e:"😔"},{t:"淡淡憂傷",e:"😢"},{t:"心力交瘁",e:"😫"},{t:"憤怒失望",e:"😠"},{t:"空虛寂寞",e:"🥶"}],"複雜心境":[{t:"百感交集",e:"😵"},{t:"五味雜陳",e:"🥴"},{t:"雖有不捨",e:"🥺"},{t:"誠惶誠恐",e:"😰"},{t:"一絲解脫",e:"😮‍💨"},{t:"身體被掏空",e:"🫥"}],"網路迷因":[{t:"我就爛",e:"😜"},{t:"蕪湖～起飛！",e:"🚀"},{t:"EMO了",e:"🖤"},{t:"泰褲辣",e:"🆒"},{t:"穩了，這波穩了",e:"👍"}]}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- DOM Elements Cache ---</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const dom = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>form: document.getElementById('resignationForm'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>letterContainer: document.getElementById('letter-container'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>letterContent: document.getElementById('letter-content'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>lengthSelector: document.getElementById('length-selector'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>generateBtn: document.getElementById('generateBtn'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>resetBtn: document.getElementById('resetBtn'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>downloadBtn: document.getElementById('downloadBtn'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>modalOverlay: document.getElementById('select-modal-overlay'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>modal: document.getElementById('select-modal'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>modalTitle: document.getElementById('select-modal-title'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>modalSearch: document.getElementById('select-modal-search'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>modalOptions: document.getElementById('select-modal-options'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>congrats: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>overlay: document.getElementById('congrats-overlay'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box: document.getElementById('congrats-box'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>emoji: document.getElementById('congrats-emoji'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>title: document.getElementById('congrats-title'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text: document.getElementById('congrats-text'),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- Helper Functions ---</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 隨機打亂陣列 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const shuffleArray = (array) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (let i = array.length - 1; i &gt; 0; i--) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const j = Math.floor(Math.random() * (i + 1));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>[array[i], array[j]] = [array[j], array[i]];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 從指定分類中獲取一個隨機選項 (適用於陣列結構的資料) */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const getRandomValue = (category) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const data = optionsData[category];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const groups = Object.keys(data);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const randomGroupKey = groups[Math.floor(Math.random() * groups.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const items = data[randomGroupKey];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return items[Math.floor(Math.random() * items.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 根據選項名稱和長度獲取對應的文案模板 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const getToneTemplate = (toneName, length) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (const group in optionsData.tones) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (optionsData.tones[group][toneName]) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const template = optionsData.tones[group][toneName];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return template[length] || template['medium'] || template['short'];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Fallback to a default template if not found</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const fallback = optionsData.tones["社區人格(與他們的執念)"]['佈告欄糾察隊'];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return fallback[length] || fallback['short'];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- Modal Logic ---</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 開啟選項卡牌彈出視窗 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function openSelectModal(targetId) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>appState.currentModalTarget = document.getElementById(targetId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const targetLabel = document.querySelector(`label[for=${targetId}]`).textContent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalTitle.textContent = `請選擇 ${targetLabel}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>buildModalOptions();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalOverlay.classList.remove('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modal.classList.remove('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalSearch.value = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalSearch.focus();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 關閉選項卡牌彈出視窗 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function closeSelectModal() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalOverlay.classList.add('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modal.classList.add('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 建立彈出視窗中的所有選項卡牌 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function buildModalOptions() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const selectElement = appState.currentModalTarget;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const filter = dom.modalSearch.value.toLowerCase();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalOptions.innerHTML = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const data = optionsData[selectElement.id];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 建立隨機選項卡</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>createModalOption({ t: 'random', e: '✨' }, selectElement);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 遍歷資料建立選項</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (const groupName in data) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const groupOptions = data[groupName];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>// Handle both array of objects and object of objects</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const options = Array.isArray(groupOptions)<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>? groupOptions.filter(opt =&gt; opt.t.toLowerCase().includes(filter))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>: Object.keys(groupOptions)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>.filter(key =&gt; key.toLowerCase().includes(filter))</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>.map(key =&gt; ({ t: key, e: groupOptions[key].e }));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (options.length &gt; 0) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const groupHeader = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>groupHeader.className = 'modal-optgroup';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>groupHeader.innerHTML = `&lt;span&gt;✨ ${groupName} ✨&lt;/span&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.modalOptions.appendChild(groupHeader);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options.forEach(opt =&gt; createModalOption(opt, selectElement));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 建立單個選項卡牌 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function createModalOption(optionData, selectElement) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const optionDiv = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>optionDiv.className = 'grid-option-card';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const text = optionData.t === 'random' ? '隨機' : optionData.t;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>optionDiv.innerHTML = `&lt;div class="emoji"&gt;${optionData.e}&lt;/div&gt;&lt;div class="text"&gt;${text}&lt;/div&gt;`;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (optionData.t === selectElement.value) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>optionDiv.classList.add('selected');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>optionDiv.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectElement.value = optionData.t;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 如果是真實選項，將 emoji 存儲在 dataset 中</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (optionData.t !== 'random') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>const selectedOptionElement = Array.from(selectElement.options).find(o =&gt; o.value === optionData.t);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>if (selectedOptionElement) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                     </span>selectElement.dataset.emoji = selectedOptionElement.dataset.emoji;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectElement.dataset.emoji = '✨';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectElement.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>closeSelectModal();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalOptions.appendChild(optionDiv);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- Main Application Logic ---</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 格式化辭職生效時間文字 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function formatResignTime(choice, customValue) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (choice === 'now') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return '自即刻起生效';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (choice === 'todayEnd') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>return '自本日午夜 24:00 時起生效';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (choice === 'custom' &amp;&amp; customValue) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const dt = new Date(customValue);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const year = dt.getFullYear() - 1911;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const month = dt.getMonth() + 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const day = dt.getDate();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const hours = String(dt.getHours()).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const minutes = String(dt.getMinutes()).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return `於中華民國 ${year} 年 ${month} 月 ${day} 日 ${hours} 時 ${minutes} 分起生效`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Custom time format error:", e);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return '自即刻起生效'; // Fallback</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return '自即刻起生效'; // Default fallback</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 根據用戶輸入產生辭職信內容 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function generateLetterHTML(data) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const today = new Date();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const rocYear = today.getFullYear() - 1911;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const month = String(today.getMonth() + 1).padStart(2, '0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const dayString = String(today.getDate()).padStart(2, '0');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const content = (data.template || "")</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{name\}/g, `&lt;span class="highlight"&gt;${data.name}&lt;/span&gt;`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{term\}/g, `&lt;span class="highlight"&gt;${data.term}&lt;/span&gt;`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{pos\}/g, `&lt;span class="highlight"&gt;${data.pos}&lt;/span&gt;`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{influencer\}/g, `&lt;span class="highlight"&gt;${data.influencer}&lt;/span&gt;`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{reason\}/g, `&lt;span class="highlight"&gt;${data.reason}&lt;/span&gt;`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.replace(/\$\{mood\}/g, `&lt;span class="highlight"&gt;${data.mood}&lt;/span&gt;`);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>return `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="letter-frame"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="letter-content" style="flex-grow: 1;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h2 style="text-align: center; font-size: 24pt; margin-bottom: 40px;"&gt;辭 職 書&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="text-indent: 2em; line-height: 2;"&gt;${content}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;p style="text-indent: 2em; line-height: 2;"&gt;上述辞職請求，${data.resignTimeText}。&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:auto; padding-top:50px; text-align:right;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div style="font-size:13pt; margin-bottom:25px;"&gt;此致 &lt;b&gt;${data.communityName}&lt;/b&gt; 管理委員會&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="signature-area"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="signature-line"&gt;&lt;span class="signature-line-label"&gt;簽 名：&lt;/span&gt;&lt;div class="signature-line-space"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="stamp-area"&gt;&lt;span class="stamp-area-label"&gt;蓋 章：&lt;/span&gt;&lt;div class="stamp-area-box"&gt;&lt;/div&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div style="text-align:right; margin-top:20px;"&gt;辞職人：&lt;span class="highlight"&gt;${data.name}&lt;/span&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div style="font-size:12pt; margin-top:10px;"&gt;日期：中華民國 ${rocYear} 年 ${month} 月 ${dayString} 日&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 更新預覽區域內容 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function updatePreview() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (!dom.letterContainer.classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const getVal = (id) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const el = document.getElementById(id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (!el) return { t: '', e: '' };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>let val = el.value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (val === 'random') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// The 'tones' data has a different structure (object of objects) compared to others (array of objects).</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>if (id === 'tones') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const groups = Object.values(optionsData.tones);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const randomGroup = groups[Math.floor(Math.random() * groups.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const toneKeys = Object.keys(randomGroup);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const randomToneKey = toneKeys[Math.floor(Math.random() * toneKeys.length)];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>return { t: randomToneKey, e: randomGroup[randomToneKey].e };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// For other categories with standard array structure, this works fine.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>return getRandomValue(id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const selectedOption = Array.from(el.options).find(o =&gt; o.value === val);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return { t: val, e: selectedOption ? selectedOption.dataset.emoji : '📄' };</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const userData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>communityName: document.getElementById('communityName').value || '無限城',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>name: document.getElementById('yourName').value || 'J大',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>term: document.getElementById('committeeTerm').value || '87',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>pos: getVal('positions').t,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>tone: getVal('tones').t,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>influencer: getVal('influencers').t,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>reason: getVal('reasons').t,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>mood: getVal('moods').t,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resignTimeText: formatResignTime(</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>document.querySelector('input[name="resignTime"]:checked').value,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>document.getElementById('customTime').value</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>userData.template = getToneTemplate(userData.tone, appState.selectedLength);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.letterContent.innerHTML = generateLetterHTML(userData);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error during preview update:", e);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.letterContent.innerHTML = `&lt;div class="letter-frame"&gt;&lt;div class="letter-content"&gt;&lt;h2&gt;生成錯誤&lt;/h2&gt;&lt;p&gt;哎呀，好像出錯了！可能是隨機選項組合太奇特，導致時空錯亂。請嘗試重新選擇或再按一次生成！&lt;br&gt;&lt;br&gt;錯誤訊息：${e.message}&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- Event Listeners Setup ---</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function attachEventListeners() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 文章長度選擇器</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.lengthSelector.addEventListener('click', e =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const button = e.target.closest('button');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (button) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.lengthSelector.querySelector('.active').classList.remove('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>appState.selectedLength = button.dataset.length;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updatePreview();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 生成按鈕</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.generateBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!dom.congrats.overlay.classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.congrats.overlay.classList.add('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.letterContainer.classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updatePreview();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.letterContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 重設按鈕與彩蛋</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const resetEasterEggs = [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '👏', t: '恭喜留任！', x: '社區的和平又被您守護了一次！'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '🤔', t: '咦？又按了一次？', x: '看來您對留任的決心非常堅定呢！'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '🤨', t: '還要按？', x: '您是不是... 找不到生成按鈕在哪？'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '😇', t: '天使的祝福', x: '上天看到了您的犧牲，決定賜福您...繼續當委員。'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '🙏', t: '佛祖的開示', x: '施主，留任即是修行，辞職亦是修行，皆是夢幻泡影。'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '👑', t: '委員，我的超人', x: '您就是社區的英雄，我們都懂。'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '😂', t: '其實很想辞吧？', x: '沒關係，我們都懂，再試一次吧！'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '🤖', t: '系統警告', x: '偵測到「不想辞」能量過高，產生器即將過載...'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '💥', t: '產生器崩壞', x: '好吧，您贏了。我辞職不幹了，您自己想辦法！'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '❓', t: '...哈囉？', x: '您還在？好吧，看來您是真心不想辞了。'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '❤️', t: '我們愛你3000次', x: '謝謝您為社區的付出，真的。'},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>{e: '✨', t: '您已解鎖「真．留任者」', x: '您的毅力感動了宇宙，祝您任期順利！'}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.resetBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!dom.congrats.overlay.classList.contains('hidden')) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>dom.congrats.overlay.classList.add('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.form.reset();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('select').forEach(sel =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>sel.value = "random";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>sel.dispatchEvent(new Event('change', { bubbles: true }));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('customTime').classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.lengthSelector.querySelector('.active').classList.remove('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.lengthSelector.querySelector('[data-length="short"]').classList.add('active');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appState.selectedLength = 'short';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.letterContainer.classList.add('hidden');</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const egg = resetEasterEggs[appState.resetClickCount % resetEasterEggs.length];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.congrats.emoji.textContent = egg.e;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.congrats.title.textContent = egg.t;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.congrats.text.textContent = egg.x;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.congrats.overlay.classList.remove('hidden', 'opacity-0');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>appState.resetClickCount++;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 彈出視窗相關</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalOverlay.addEventListener('click', closeSelectModal);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.modalSearch.addEventListener('input', buildModalOptions);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 表單內容變動時即時更新預覽</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.form.addEventListener('change', updatePreview);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.form.addEventListener('input', updatePreview);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 辭職時間選項</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.querySelector('.radio-group').addEventListener('change', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const customInput = document.getElementById('customTime');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (e.target.value === 'custom') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.classList.remove('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>customInput.classList.add('hidden');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// ENHANCEMENT: Improved download button with loading state and error handling.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>dom.downloadBtn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>updatePreview();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const originalBtnHTML = dom.downloadBtn.innerHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.downloadBtn.disabled = true;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>dom.downloadBtn.innerHTML = `&lt;span&gt;PDF 產製中... ⏳&lt;/span&gt;`;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// A small delay ensures the button text updates before the heavy PDF task starts</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>html2pdf().from(dom.letterContent).set({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>margin: 0,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>filename: '委員不想幹了.pdf',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>image: { type: 'jpeg', quality: 1.0 },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: null },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}).save().then(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Restore the button after the save dialog is triggered</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dom.downloadBtn.innerHTML = originalBtnHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dom.downloadBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}).catch(err =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>console.error("PDF generation failed:", err);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dom.downloadBtn.innerHTML = `&lt;span&gt;生成失敗 😭&lt;/span&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>dom.downloadBtn.innerHTML = originalBtnHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>dom.downloadBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}, 2500);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error("An unexpected error occurred during PDF generation:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>dom.downloadBtn.innerHTML = `&lt;span&gt;發生錯誤 😭&lt;/span&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dom.downloadBtn.innerHTML = originalBtnHTML;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dom.downloadBtn.disabled = false;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}, 2500);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}, 150);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// --- Initialization ---</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>/** 應用程式初始化 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function initialize() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 1. 產生漂浮標語</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const taglines = ["又雙叒叕當選了？","這是您第幾次辞職？","我們來幫您一鍵清除煩惱！","社區的和平，交給下一位勇者了","辞職一時爽，一直辞職一直爽","再撐一下？還是算了...","您的肝，還好嗎？","社區鬼王就交給你們了！","找不到的噪音就像無限城裡找不到無慘一樣啊啊啊！","社區的孤勇者，愛過，再會了！","我辞的不是職，是寂寞。","解放生產力，從辞職開始！","樓上的噪音，比One Piece還難找！","為愛發電的電池也該換了","我的任期，比手遊的壽命還短","我不幹了，JOJO！","這是一個不能說的秘密(職位)","都是they的錯！","幫我撐十秒！...算了","先承認你就是你朋友","這鍋我不背","感謝各位委員過去的照顧，我的身體狀況...好得不得了！","能力越大，責任越重，所以我選擇能力變小","我的字典裡沒有放棄...但有辞職","你終究要辞職的，為什麼不現在就辞？","錢沒有不見，只是變成了我為社區付出的模樣","再點一次隨機，你會看到不一樣的人生","主委，我不想努力了...","人生好難，當委員更難","我不只斜槓，我還想躺平","這不是辞職，是戰術性轉進","不要問我為什麼，問就是心累","我的熱情，比變了心的女友還回不來","那些殺不死我的，都讓我更想辞職","讓我們看雲去","下一屆，我一定投你！(如果你還選的話)","燃燒自己，照亮社區...然後燒成灰","這屆的委員真難帶","我的故事，說來話長...","總有刁民想害朕","我想靜靜...也別問我靜靜是誰","會議記錄，是我寫過最難的小說","這是一個關於愛與和平...與辞職的故事","再不辞職，頭髮都要掉光了","別攔我，我意已決！","我有一個夢想...就是不用再開會","人生自古誰無死，誰能留下不辞職","只要我辭得夠快，紛擾就追不上我","我不是跑路，是去追逐詩和遠方","委員一職，後會無期","今天的我，沒有極限(指辞職的決心)","為了部落！...啊不對，為了我自己！","其實我...是臥底","這一切，值得嗎？","我累了，毀滅吧，趕緊的","山水有相逢，開會不相見","謝謝，下一位","今天，我想來點...自由的空氣","你的超能力是什麼？我超有錢...才怪，我是無薪委員","社區糾紛，是人性的試煉場","有些人光是活著，就已用盡全力(還要當委員)","我只想做個安靜的美男子/女子","放下助人情結，尊重他人命運","這個職位...泰褲辣！但我還是要辞","確認過眼神，是我不想幹的人","你禮貌嗎？(對著各種鳥事說)","YYDS (永遠得閃)","你當過委員嗎？我沒有，因為我辞了","這資訊量太大了...","你人還怪好的嘞...勸我快辞職","我就爛，拖垮社區防線","簡直是世紀大和解(我跟職位的)","挖呀挖呀挖～挖出一個辞職信","小朋友你是否有很多問號？為什麼我還不辞職","聽我說謝謝你，因為有你，溫M暖了四季(並沒有)","真是栓Q了","芭比Q了",...Array(20).fill(" ")];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>shuffleArray(taglines);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const container = document.getElementById('header-taglines-container');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const zones = [[5,25,5,25],[35,65,-5,15],[75,95,5,25],[5,25,30,50],[75,95,30,50],[5,25,65,85],[35,65,80,100],[75,95,65,85],[30,70,40,60]];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>shuffleArray(zones);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>taglines.slice(0, 9).forEach((text, i) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!text.trim()) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const tagline = document.createElement('div');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tagline.className = 'tagline';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tagline.textContent = text;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const [leftMin, leftMax, topMin, topMax] = zones[i];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tagline.style.left = `${leftMin + Math.random() * (leftMax - leftMin)}%`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tagline.style.top = `${topMin + Math.random() * (topMax - topMin)}%`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const rotation = Math.random() * 10 - 5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>tagline.style.setProperty('--r', `${rotation}deg`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>container.appendChild(tagline);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 2. 將資料庫內容填入隱藏的 &lt;select&gt; 元素中</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>for (const category in optionsData) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectElement = document.getElementById(category);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (selectElement) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectElement.innerHTML = ''; // 清空舊選項</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                 </span>// Add a "random" option first</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const randomOption = document.createElement('option');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>randomOption.value = 'random';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>randomOption.textContent = '隨機';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>randomOption.dataset.emoji = '✨';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectElement.appendChild(randomOption);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const data = optionsData[category];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>for (const groupName in data) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const optgroup = document.createElement('optgroup');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>optgroup.label = groupName;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const itemsOrObjects = data[groupName];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (Array.isArray(itemsOrObjects)) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Handles: positions, influencers, reasons, moods</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>itemsOrObjects.forEach(item =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const option = document.createElement('option');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.value = item.t;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.textContent = item.t;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.dataset.emoji = item.e;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>optgroup.appendChild(option);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Handles the special object structure for: tones</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>for (const itemName in itemsOrObjects) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const itemData = itemsOrObjects[itemName];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const option = document.createElement('option');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.value = itemName;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.textContent = itemName;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>option.dataset.emoji = itemData.e;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>optgroup.appendChild(option);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>selectElement.appendChild(optgroup);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 3. 初始化所有自訂選擇按鈕</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.querySelectorAll('.select-button').forEach(button =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const targetId = button.dataset.target;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectEl = document.getElementById(targetId);</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 監聽底層 select 的變化，來更新按鈕外觀</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectEl.addEventListener('change', (e) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const isRandom = e.target.value === 'random';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const text = isRandom ? '隨機' : e.target.value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const emoji = isRandom ? '✨' : (e.target.options[e.target.selectedIndex]?.dataset.emoji || '📁');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>button.innerHTML = `&lt;span class="emoji"&gt;${emoji}&lt;/span&gt;&lt;span class="text"&gt;${text}&lt;/span&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 設定初始狀態為隨機並觸發一次 change 事件來更新外觀</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectEl.value = 'random';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectEl.dispatchEvent(new Event('change'));</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// 幫按鈕加上點擊事件來打開 modal</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>button.addEventListener('click', () =&gt; openSelectModal(targetId));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// 4. 綁定所有事件監聽器</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>attachEventListeners();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// 啟動應用程式</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>initialize();</span></p>
+<p class="p1"><span class="s1">});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
